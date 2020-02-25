@@ -1,0 +1,63 @@
+page {
+  bodyTagCObject = COA
+  bodyTagCObject {
+    stdWrap.wrap = <body | >
+    stdWrap.case = lower
+
+    //Classes
+    10 = COA
+    10 {
+      stdWrap.noTrimWrap = | class="|" |
+
+      #Add name of the backend-layout
+      10 < lib.templateName
+      10.stdWrap {
+        ifEmpty = Default
+        wrap = pagelayout-|
+        noTrimWrap = || |
+      }
+
+      #Add name of the layout
+      20 = TEXT
+      20 {
+        data = levelfield:-2, layout, slide
+        override.field = layout
+        wrap = theme-|
+        noTrimWrap = || |
+        required = 1
+        ifEmpty = default
+      }
+
+      # Add language
+      30 = TEXT
+      30 {
+        wrap = lang-|
+        noTrimWrap = || |
+        required = 1
+        ifEmpty = de
+      }
+
+      # Add pid
+      40 = TEXT
+      40 {
+        field = uid
+        noTrimWrap = |pageid-||
+      }
+
+      // Current language Iso Code
+      50 = TEXT
+      50 {
+        data = siteLanguage:twoLetterIsoCode
+        required = 1
+        noTrimWrap = | language-||
+      }
+
+      // Current level of the page within the tree structure
+      60 = TEXT
+      60 {
+        data = level:1
+        noTrimWrap = | pagelevel-||
+      }
+    }
+  }
+}

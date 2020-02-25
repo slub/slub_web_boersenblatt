@@ -1,0 +1,43 @@
+path {
+  public = typo3conf/ext/slub_web_boersenblatt/Resources/Public
+  private = typo3conf/ext/slub_web_boersenblatt/Resources/Private
+  config = typo3conf/ext/slub_web_boersenblatt/Configuration
+}
+
+template {
+  navigation {
+    main = 1
+  }
+}
+
+styles.content {
+  defaultHeaderType = 2
+  allowTags: = addToList(iframe)
+
+  textmedia {
+    maxW = 1110
+    maxWInText = 555
+    columnSpacing = 8
+    rowSpacing = 8
+    textMargin = 16
+
+    borderColor = #000
+    borderWidth = 1
+    borderPadding = 0
+
+    linkWrap {
+      width = 1110
+      height = 1110
+      newWindow = 0
+      lightboxEnabled = 1
+      lightboxCssClass = lightbox
+      lightboxDataAttribute = lb-{current}
+    }
+  }
+
+  links {
+    target =
+    extTarget = _blank
+    keep = path
+  }
+}

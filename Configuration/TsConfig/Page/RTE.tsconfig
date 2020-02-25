@@ -1,0 +1,4 @@
+//minimal, default, full, sitepackage_default
+RTE.default.preset = sitepackage_default
+RTE.config.tt_content.bodytext.preset = sitepackage_default
+#RTE.config.tx_news_domain_model_news.bodytext.preset = sitepackage_default

@@ -1,0 +1,10 @@
+page {
+  includeCSS {
+    app = {$path.public}/Styles/main.css
+  }
+
+  includeJSFooter {
+    app = {$path.public}/JavaScript/script.js
+    app.forceOnTop = true
+  }
+}

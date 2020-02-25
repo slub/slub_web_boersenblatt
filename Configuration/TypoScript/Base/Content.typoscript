@@ -1,0 +1,31 @@
+lib.contentElement {
+  settings {
+    gridBase = 12
+    columnPrefix {
+      medium = col-md-
+    }
+
+    srcset {
+      small = 480
+      medium = 960
+      large = 1280
+    }
+
+    sizes {
+      medium = 30em
+      large = 44em
+    }
+  }
+
+  templateRootPaths {
+    100 = {$path.private}/Templates/Content/
+  }
+
+  partialRootPaths {
+    90 = {$path.private}/Partials/FluidStyledContent/
+  }
+
+  layoutRootPaths {
+    90 = {$path.private}/Layouts/Content/
+  }
+}

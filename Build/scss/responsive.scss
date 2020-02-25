@@ -1,0 +1,97 @@
+/* ##################################################### */
+/* ############## BACK TO TOP ########################## */
+/* ##################################################### */
+
+img {max-width: 100%; height: auto}
+
+/* ##################################################### */
+/* ############## MAX 1280px ########################### */
+/* ##################################################### */
+
+@media only screen and (max-width : 1280px) {
+
+	body {margin-left: 300px;}
+	aside {width: 300px}
+	.arrow {display: none}
+
+}
+
+/* ##################################################### */
+/* ############## MAX 1024px ########################### */
+/* ##################################################### */
+
+@media only screen and (max-width : 1024px) {
+
+	html {font-size: 95%}
+
+	body {margin-left: 0;}
+	aside {left: -300px;
+		.footer {
+			ul {display: block;
+				li {
+					a, strong {}
+				}
+			}
+		}
+	}
+
+	main .logo, #menuslide {display:flex;}
+
+}
+
+/* ##################################################### */
+/* ############## MAX 768px ############################ */
+/* ##################################################### */
+
+@media only screen and (max-width : 768px) {
+
+	.col-2 {grid-template-columns: repeat(auto-fill, minmax(400px,1fr));}
+	.col-3 {grid-template-columns: repeat(auto-fill, minmax(260px,1fr));}
+	.col-4 {grid-template-columns: repeat(auto-fill, minmax(200px,1fr));}
+	.col-5 {grid-template-columns: repeat(auto-fill, minmax(160px,1fr));}
+
+	.inner {padding: 2em}
+	article {
+		.infos {padding: 2em;}
+	}
+}
+
+/* ##################################################### */
+/* ############## MAX 568px ############################ */
+/* ##################################################### */
+
+@media only screen and (max-width : 568px) {
+
+	html {font-size: 90%}
+
+	.searchbar {
+	    .fulltext-switch {display: block;justify-content: center; 
+	        label {
+	        }
+	    }
+	}
+
+	.col-2 {grid-template-columns: repeat(auto-fill, minmax(300px,1fr));}
+	.col-3 {grid-template-columns: repeat(auto-fill, minmax(260px,1fr));}
+	.col-4 {grid-template-columns: repeat(auto-fill, minmax(200px,1fr));}
+	.col-5 {grid-template-columns: repeat(auto-fill, minmax(160px,1fr));}
+
+}
+
+/* ##################################################### */
+/* ############## MAX 320px ############################ */
+/* ##################################################### */
+
+@media only screen and (max-width : 320px) {
+
+	html {font-size: 80%}
+
+	.col-2 {grid-template-columns: repeat(auto-fill, minmax(260px,1fr));}
+	.col-3 {grid-template-columns: repeat(auto-fill, minmax(260px,1fr));}
+	.col-4 {grid-template-columns: repeat(auto-fill, minmax(200px,1fr));}
+	.col-5 {grid-template-columns: repeat(auto-fill, minmax(160px,1fr));}
+
+}
+
+
+

@@ -1,0 +1,28 @@
+mod.wizards.newContentElement {
+  wizardItems {
+    common {
+      elements {
+        image {
+          tt_content_defValues {
+            imageorient = 0
+            imagecols = 1
+          }
+        }
+
+        textpic {
+          tt_content_defValues {
+            imageorient = 0
+            imagecols = 1
+          }
+        }
+
+        textmedia {
+          tt_content_defValues {
+            imageorient = 0
+            imagecols = 1
+          }
+        }
+      }
+    }
+  }
+}

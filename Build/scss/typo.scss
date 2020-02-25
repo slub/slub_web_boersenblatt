@@ -1,0 +1,176 @@
+/* ##################################################### */
+/* ############## SELECTION STYLING #################### */
+/* ##################################################### */
+
+::selection {
+  color: $color4;
+  background: $color1;
+  text-shadow: none;
+}
+
+/* ##################################################### */
+/* ############## MAIN TYPO ############################ */
+/* ##################################################### */
+
+html {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: 100%;
+  color: $text-color;
+  line-height: 1.8;
+}
+
+p {
+  margin: 1em 0 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 3em 0 1em;
+}
+h2 {
+  font-size: 1.8em;
+  padding: 3em 0 0;
+}
+h3 {
+  font-size: 1.3em;
+  padding: 3em 0 0;
+}
+h4 {
+  font-size: 1em;
+  padding: 3em 0 0;
+}
+
+h1 + h2,
+h1 + h3,
+h1 + h4,
+h2 + h3,
+h2 + h4,
+h3 + h4 {
+  padding-top: 0.4em;
+}
+
+.home {
+  h1 {
+    font-size: 1.3em;
+  }
+}
+
+/*#################################################
+  ################## TABELLEN #####################
+  #################################################*/
+
+table {
+  margin: 1.5em 0 2.5em;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 1.2em;
+    border: 1px solid $color6;
+    line-height: 1.2;
+    vertical-align: top;
+
+    h2,
+    h3,
+    h4 {
+      &:first-of-type {
+        padding: 0;
+      }
+    }
+  }
+
+  tr {
+    &:first-child {
+      td,
+      th {
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+    td,
+    th {
+      &:first-child {
+        border-left: 0;
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+/* ##################################################### */
+/* ############## LINKS ################################ */
+/* ##################################################### */
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all 0.3s linear 0s;
+
+  &:hover {
+    color: $link-hover-color;
+    border-color: $link-hover-color;
+  }
+  &:active {
+    color: $link-color;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+main {
+  a {
+    border-bottom: 1px dotted $link-color;
+  }
+}
+
+figure {
+  a {
+    border: none;
+  }
+}
+
+/* ##################################################### */
+/* ############## ICONS ################################ */
+/* ##################################################### */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  padding-right: 0.5em;
+}
+
+.icon {
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

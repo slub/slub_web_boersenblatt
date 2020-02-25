@@ -1,0 +1,81 @@
+/* ##################################################### */
+/* ############## MOBILE MENU SLIDE TOGGLE ############# */
+/* ##################################################### */
+
+#menuslide {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	font-size: 2em;
+	border: none;
+	cursor: pointer;
+	line-height: 1;
+	color: $color4;
+	display: none;
+	z-index: 100;
+	span {
+		padding: 0;
+	}
+}
+
+/* ##################################################### */
+/* ############## BACK TO TOP ########################## */
+/* ##################################################### */
+
+.back-to-top {
+	background: $color4;
+	color: $color3;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	padding: 0.6em 0.8em;
+	border: none;
+	text-decoration: none;
+	display: none;
+	z-index: 100;
+	span {
+		padding: 0;
+		font-size: 1.1em;
+	}
+}
+
+/* ##################################################### */
+/* ############## SONSTIGES ############################ */
+/* ##################################################### */
+
+.arrow {
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	z-index: 10;
+	margin-left: -1em;
+	a {
+		display: block;
+		border: none;
+		color: $color4;
+		span {
+			padding: 0;
+			font-size: 2.5em;
+		}
+	}
+}
+
+.bounce {
+	animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}

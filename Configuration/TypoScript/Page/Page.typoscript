@@ -1,0 +1,87 @@
+page {
+  10 = FLUIDTEMPLATE
+  10 {
+    templateName < lib.templateName
+
+    templateRootPaths {
+      10 = {$path.private}/Templates/Page
+    }
+
+    partialRootPaths {
+      10 = {$path.private}/Partials/Page
+    }
+
+    layoutRootPaths {
+      10 = {$path.private}/Layouts/Page
+    }
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+
+      # Main Menu
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        special = directory
+        special.value = {$template.navigation.main}
+        levels = 2
+        includeSpacer = 0
+        as = menuMain
+      }
+
+      # Sub Menu
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        entryLevel = 1
+        levels = 2
+        expandAll = 0
+        includeSpacer = 1
+        as = menuSub
+      }
+
+      # Meta menu
+      30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      30 {
+        special = directory
+        special.value = {$template.navigation.meta}
+        levels = 1
+        as = menuMeta
+      }
+
+      # Footer Menu
+      40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      40 {
+        special = list
+        special.value = {$template.navigation.footer}
+        levels = 1
+        includeSpacer = 0
+        as = menuFooter
+      }
+
+      # Language Menu
+      50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      50 {
+        special = language
+        special.value = {$template.navigation.languages}
+        addQueryString = 1
+        addQueryString.exclude = id,no_cache
+        addQueryString.method = GET
+        as = menuLanguage
+      }
+
+      # breadcrumb
+      60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      60 {
+        special = rootline
+        special.range = 0|-1
+        includeNotInMenu = 0
+        as = menuBreadcrumb
+      }
+    }
+
+    settings {
+      pidRoot = {$template.navigation.main}
+    }
+  }
+}

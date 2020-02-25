@@ -1,0 +1,171 @@
+/* ##################################################### */
+/* ############## Placeholder styling ################## */
+/* ##################################################### */
+
+::-webkit-input-placeholder {
+  color: $color3;
+  font-family: $heading-font-family;
+  letter-spacing: 1px;
+}
+::-moz-placeholder {
+  color: $color3;
+  font-family: $heading-font-family;
+  letter-spacing: 1px;
+}
+:-ms-input-placeholder {
+  color: $color3;
+  font-family: $heading-font-family;
+  letter-spacing: 1px;
+}
+::placeholder {
+  color: $color3;
+  font-family: $heading-font-family;
+  letter-spacing: 1px;
+}
+
+/* ##################################################### */
+/* ############## Turn off native styling ############## */
+/* ##################################################### */
+
+.button,
+label,
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="password"],
+input[type="search"],
+input[type="submit"],
+input[type="checkbox"],
+button[type="submit"] {
+  appearance: none;
+  font-family: $heading-font-family;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: none;
+  border-radius: 0;
+}
+
+/* ##################################################### */
+/* ############## Core styling ######################### */
+/* ##################################################### */
+
+textarea,
+input[type="text"],
+input[type="search"] {
+  width: 100%;
+  padding: 1em 1.5em;
+  color: $color3;
+  font-size: 1em;
+  background-color: $color4;
+}
+
+.button,
+input[type="button"],
+button[type="submit"] {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.5em;
+  text-align: center;
+  background-color: $color1;
+  color: $color4;
+  &:hover {
+    color: $color4;
+    background-color: $color9;
+  }
+}
+
+input[type="radio"] {
+  width: auto;
+  float: left;
+  margin-right: 0.75em;
+  background: transparent;
+  border: none;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  background: transparent;
+  position: relative;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="radio"] + label {
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label::before,
+input[type="radio"]:not(:checked) + label::before {
+  content: " ";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 2px;
+  background: $color4;
+  margin-right: 1em;
+  border-radius: 30px;
+}
+
+input[type="radio"]:hover + label::before {
+  background: $color7;
+}
+
+input[type="radio"]:checked + label::before {
+  background: $color1;
+}
+
+/* ##################################################### */
+/* ############## Search Bar ########################### */
+/* ##################################################### */
+
+.searchbar {
+  max-width: 900px;
+  margin: auto auto 2em;
+  position: relative;
+  width: 100%;
+  form {
+    > div {
+      display: flex;
+      input#tx-dlf-search-query {
+        flex-grow: 1;
+      }
+      button[type="submit"] {
+        width: 5em;
+        margin-left: 5px;
+        background-color: $color4;
+        transition: color 0.5s;
+        &:hover {
+          span {
+            color: $color6;
+          }
+        }
+        span {
+          font-size: 1.5em;
+          color: $color7;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  label {
+    display: none;
+  }
+  .tx-dlf-search-form > div {
+    position: relative;
+  }
+
+  .fulltext-switch {
+    position: absolute;
+    top: 115%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    label {
+      display: block;
+      padding: 0 2em 0 0.4em;
+    }
+  }
+}
