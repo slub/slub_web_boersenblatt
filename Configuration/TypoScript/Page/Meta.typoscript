@@ -3,12 +3,6 @@ page {
   shortcutIcon = {$path.public}/Icons/Favicon.svg
 
   meta {
-    keywords.data = page:keywords
-    keywords.required = 1
-
-    author.data = page:author
-    author.required = 1
-
-    viewport = width=device-width, initial-scale=1.0
+    viewport = width=device-width, initial-scale=1
   }
 }
