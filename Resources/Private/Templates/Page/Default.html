@@ -1,18 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 
+<f:spaceless>
 
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+    <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
 
-    <f:layout name="Page" />
-
-    <f:section name="Main">
-        <div class="content-wrapper container">
-            <div class="row">
-                <div class="primary">
-                    <h2>{data.title}</h2>
-                    <f:format.raw>{content}</f:format.raw>
-                </div>
-            </div>
+    <aside>
+        <f:debug>{_all}</f:debug>
+        <div class="logo">
+            <f:link.page pageUid="{settings.pidRoot}">
+                <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital" />
+            </f:link.page>
         </div>
-    </f:section>
 
-</div>
+        <f:render partial="MenuMain" arguments="{menuMain: menuMain}" />
+        <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}" />
+    </aside>
+
+    <main>
+        <a id="menuslide"><span class="icon-menu"></span></a>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"></f:cObject>
+    </main>
+</f:spaceless>
+
+</html>

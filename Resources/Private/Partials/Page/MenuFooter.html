@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:debug>{_all}</f:debug>
+<f:if condition="{menuFooter}">
+    <nav class="footer">
+        <ul>
+            <f:for each="{menuFooter}" as="mainItem">
+                <li>
+                    <a href="{mainItem.link}">{mainItem.title}</a>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>
+
+</html>

@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{menuMain}">
+    <nav class="main">
+        <ul>
+            <f:for each="{menuMain}" as="mainItem">
+                <li>
+                    <a href="{mainItem.link}">{mainItem.title}</a>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>
+
+</html>
