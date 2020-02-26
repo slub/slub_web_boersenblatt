@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-02-26T10:27:24Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-02-26T11:15:41Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
-			<trans-unit id="backend_layout.default">
-				<source>Default</source>
-				<target>Standard</target>
-			</trans-unit>
 			<trans-unit id="backend_layout.colpos.0">
 				<source>Main Content</source>
 				<target>Hauptinhalte</target>
@@ -16,8 +12,28 @@
 				<target>Partner Logos</target>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.empty">
-				<source>Contentf rom Template</source>
+				<source>Content from Template</source>
 				<target>Inhalte aus dem Template</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.default">
+				<source>Default</source>
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="ce_plainimages.description">
+				<source>Simple Images used for Partner Logos.</source>
+				<target>Einfache Bilder für Partner Logos.</target>
+			</trans-unit>
+			<trans-unit id="ce_plainimages.title">
+				<source>Plain Images</source>
+				<target>Einfache Bilder</target>
+			</trans-unit>
+			<trans-unit id="content.div_custom_content">
+				<source>Slub Elements</source>
+				<target>Slub Elemente</target>
+			</trans-unit>
+			<trans-unit id="newcontentelement.custom.title">
+				<source>Slub Elements</source>
+				<target>Slub Elemente</target>
 			</trans-unit>
 		</body>
 	</file>

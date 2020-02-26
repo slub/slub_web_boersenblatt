@@ -33,6 +33,19 @@ call_user_func(
                 \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
                 ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/Default.svg']
             );
+
+            //Content
+            $icons = [
+                'ce_plainimages' => 'image',
+                ];
+
+            foreach ($icons as $key => $icon) {
+                $iconRegistry->registerIcon(
+                    $key,
+                    \TYPO3\CMS\Core\Imaging\IconProvider\FontawesomeIconProvider::class,
+                    ['name' => $icon]
+                );
+            }
         }
     }
 );

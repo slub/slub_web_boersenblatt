@@ -1,5 +1,8 @@
 mod.wizards.newContentElement {
   wizardItems {
+    custom {
+      header = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:newcontentelement.custom.title
+    }
     common {
       elements {
         image {
