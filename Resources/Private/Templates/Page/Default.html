@@ -6,7 +6,6 @@
     <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
 
     <aside>
-        <f:debug>{_all}</f:debug>
         <div class="logo">
             <f:link.page pageUid="{settings.pidRoot}">
                 <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital" />
@@ -15,11 +14,14 @@
 
         <f:render partial="MenuMain" arguments="{menuMain: menuMain}" />
         <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}" />
+        <div class="partner">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}" />
+        </div>
     </aside>
 
     <main>
         <a id="menuslide"><span class="icon-menu"></span></a>
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"></f:cObject>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
     </main>
 </f:spaceless>
 
