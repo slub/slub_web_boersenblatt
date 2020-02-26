@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## make Directory if no exist
 mkdir -p ../Resources/Public/JavaScript
 
 ## default js build steps
