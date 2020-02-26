@@ -20,6 +20,13 @@ page {
     ##########################
     dataProcessing {
 
+      # Page media
+      5 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      5 {
+        references.fieldName = media
+        as = pageMedia
+      }
+
       # Main Menu
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {

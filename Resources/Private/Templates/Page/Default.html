@@ -21,6 +21,15 @@
 
     <main>
         <a id="menuslide"><span class="icon-menu"></span></a>
+        <f:if condition="{pageMedia}">
+            <div class="banner">
+                <div class="fadein">
+                    <f:for each="{pageMedia}" as="media" iteration="it">
+                        <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}" />
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
     </main>
 </f:spaceless>
