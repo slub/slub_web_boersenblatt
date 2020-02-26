@@ -1,6 +1,6 @@
 page = PAGE
 page {
-  shortcutIcon = {$path.public}/Icons/favicon.ico
+  shortcutIcon = {$path.public}/Icons/Favicon.svg
 
   meta {
     keywords.data = page:keywords
