@@ -6,7 +6,7 @@
 	"repository": "npm/npm",
 	"scripts": {
 		"css:dev": "onchange -i --poll 100  './scss/**/*.scss' -- time ./run/build-css.sh",
-		"css:fix": "onchange -i --poll 100  './scss/**/*.scss' -- time ./run/build-css.sh fix",
+		"css:fix": "./run/build-css.sh fix",
 		"js:dev": "onchange -i --poll 100  './js/**/*.js' -- time ./run/build-js.sh",
 		"dev": "npm run css:dev & npm run js:dev",
 		"dev:gulp": "npx gulp",
@@ -69,13 +69,13 @@
 		"rules": {
 			"at-rule-no-unknown": null,
 			"indentation": [
-				4,
+				2,
 				{
 					"ignore": [
 						"value"
 					],
-					"message": "Please use 4 spaces for indentation.",
-					"severity": "error"
+					"message": "Please use 2 spaces for indentation.",
+					"severity": "warning"
 				}
 			]
 		}
