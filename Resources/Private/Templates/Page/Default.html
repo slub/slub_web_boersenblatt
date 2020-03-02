@@ -8,14 +8,14 @@
     <aside>
         <div class="logo">
             <f:link.page pageUid="{settings.pidRoot}">
-                <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital" />
+                <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/>
             </f:link.page>
         </div>
 
-        <f:render partial="MenuMain" arguments="{menuMain: menuMain}" />
-        <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}" />
+        <f:render partial="MenuMain" arguments="{menuMain: menuMain}"/>
+        <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}"/>
         <div class="partner">
-            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}"/>
         </div>
     </aside>
 
@@ -25,12 +25,12 @@
             <div class="banner">
                 <div class="fadein">
                     <f:for each="{pageMedia}" as="media" iteration="it">
-                        <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}" />
+                        <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}"/>
                     </f:for>
                 </div>
             </div>
         </f:if>
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
     </main>
 </f:spaceless>
 

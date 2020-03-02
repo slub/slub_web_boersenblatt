@@ -23,7 +23,7 @@ page {
       # Page media
       5 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
       5 {
-        references.fieldName = media
+        references.data = levelmedia: -1, slide
         as = pageMedia
       }
 
