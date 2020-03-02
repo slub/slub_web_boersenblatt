@@ -53,7 +53,8 @@
 		],
 		"parserOptions": {
 			"ecmaVersion": 6,
-			"sourceType": "script"
+			"sourceType": "script",
+			"indent": ["error", 4]
 		}
 	},
 	"stylelint": {
