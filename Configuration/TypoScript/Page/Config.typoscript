@@ -1,0 +1,8 @@
+### https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Setup/Config/Index.html ###
+
+config {
+  concatenateCss = 1
+  concatenateJs = 1
+  compressJs = 1
+  compressCss = 1
+}

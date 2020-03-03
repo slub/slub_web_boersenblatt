@@ -1,0 +1,148 @@
+### DOCS https://docs.typo3.org/m/typo3/reference-tsconfig/9.5/en-us/PageTsconfig/TceForm.html ###
+
+TCEFORM {
+  pages {
+    layout {
+      disabled = 0
+    }
+
+    subtitle {
+      disabled = 0
+    }
+
+    categories {
+      disabled = 0
+    }
+
+    rowDescription {
+      disabled = 0
+    }
+  }
+
+  tt_content {
+
+    CType {
+      removeItems (
+#            bullets,
+#            div,
+#            form_formframework,
+#            header,
+#            html,
+#            image,
+#            list,
+#            login,
+#            menu_abstract,
+#            menu_categorized_content,
+#            menu_categorized_pages,
+#            menu_pages,
+#            menu_recently_updated,
+#            menu_related_pages,
+#            menu_section,
+#            menu_section_pages,
+#            menu_sitemap,
+#            menu_sitemap_pages,
+#            menu_subpages,
+#            shortcut,
+#            table,
+#            text,
+#            textmedia,
+#            textpic,
+#            uploads
+      )
+    }
+
+    header_layout {
+      disabled = 0
+    }
+
+    header_position {
+      disabled = 0
+    }
+
+    date {
+      disabled = 0
+    }
+
+    header_link {
+      disabled = 0
+    }
+
+    subheader {
+      disabled = 0
+    }
+
+    layout {
+      disabled = 0
+    }
+
+    frame_class {
+      disabled = 0
+      removeItems (
+#          default,
+#          ruler-before,
+#          ruler-after,
+#          indent,
+#          indent-left,
+#          indent-right,
+#          none
+      )
+    }
+
+    space_before_class {
+      disabled = 0
+      removeItems (
+#            extra-small,
+#            small,
+#            medium,
+#            large,
+#            extra-large
+      )
+    }
+
+    space_after_class {
+      disabled = 0
+      removeItems (
+#            extra-small,
+#            small,
+#            medium,
+#            large,
+#            extra-large
+      )
+    }
+
+    imagewidth {
+      disabled = 0
+    }
+
+    imageheight {
+      disabled = 0
+    }
+
+    imageborder {
+      disabled = 0
+    }
+
+    imagecols {
+      disabled = 0
+#      removeItems = 5,7,8
+    }
+
+    image_zoom {
+      disabled = 0
+    }
+
+    imageorient {
+      disabled = 0
+#      removeItems = 1,2,9,10,17,18
+    }
+
+    sectionIndex {
+      disabled = 0
+    }
+
+    linkToTop {
+      disabled = 0
+    }
+
+  }
+}

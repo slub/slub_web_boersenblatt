@@ -1,0 +1,8 @@
+page = PAGE
+page {
+  shortcutIcon = {$path.public}/Icons/Favicon.svg
+
+  meta {
+    viewport = width=device-width, initial-scale=1
+  }
+}

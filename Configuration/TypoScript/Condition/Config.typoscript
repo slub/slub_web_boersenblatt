@@ -1,0 +1,13 @@
+### https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Conditions/Index.html ###
+
+[applicationContext = Development*] || [applicationContext = Testing/Local]
+  config {
+    contentObjectExceptionHandler = 0
+    admPanel = 1
+
+    concatenateCss = 0
+    concatenateJs = 0
+    compressJs = 0
+    compressCss = 0
+  }
+[end]

@@ -1,0 +1,63 @@
+/* ##################################################### */
+
+/* ############## VARIABLEN ############################ */
+
+/* ##################################################### */
+
+$color1: #e3000b; /* SLUB Rot */
+$color2: #868686; /* 60% Schwarz */
+$color3: #505050; /* Text Color */
+$color4: #fff; /* Weiss */
+$color5: #777; /* Grau */
+$color6: #bbb; /* Grau */
+$color7: #e0e0e0; /* Grau */
+$color8: #f75459; /* Rot heller */
+$color9: #c60006; /* Rot dunkler */
+$color10: #a80107; /* Rot dunkler */
+$color11: #f0f0f0; /* Rot dunkler */
+
+$text-color: $color3;
+$heading-color: $color1;
+$link-color: $color1;
+$link-hover-color: $color10;
+$link-visited-color: $color1;
+$base-font-family: 'Martel', serif;
+$base-font-weight: 400;
+$heading-font-family: vista-sans-narrow, sans-serif;
+$heading-font-weight: 500;
+
+/* Davitec Variables */
+@import 'components/variables';
+
+/* Reset/Normalize https://github.com/csstools/sanitize.css/ */
+@import "sanitize";
+
+/* Schriftsatz */
+@import "typo";
+
+/* Icons */
+@import 'components/fonts/icomoon';
+
+/* Formulare */
+@import "forms";
+
+/* jQuery Swiper https://github.com/nolimits4web/swiper */
+@import "swiper";
+
+/* jQuery Lightbox https://github.com/cbopp-art/lightcase */
+@import "lightcase";
+
+/* Navigation */
+@import "menu";
+
+/* allgemeines Layout */
+@import "layout";
+
+/* Responsive Layout */
+@import "responsive";
+
+/* Cross-Browser Styling */
+@import "browser";
+
+/* Custom Styling Davitec */
+@import "custom";

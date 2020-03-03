@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-02-26T11:15:41Z" product-name="slub_web_boersenblatt">
+		<header/>
+		<body>
+			<trans-unit id="backend_layout.colpos.0">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.30">
+				<source>Partner Logos</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.empty">
+				<source>Content from Template</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="ce_plainimages.description">
+				<source>Simple Images used for Partner Logos.</source>
+			</trans-unit>
+			<trans-unit id="ce_plainimages.title">
+				<source>Plain Images</source>
+			</trans-unit>
+			<trans-unit id="content.div_custom_content">
+				<source>Slub Elements</source>
+			</trans-unit>
+			<trans-unit id="newcontentelement.custom.title">
+				<source>Slub Elements</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

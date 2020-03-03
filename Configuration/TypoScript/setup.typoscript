@@ -1,21 +1,30 @@
-# Placeholder configuration --> split if getting more complex
-page = PAGE
-page {
-    10 = FLUIDTEMPLATE
-    10 {
-        templateName = Default
-        // = EXT:slub_web_boersenblatt/Resources/Private/Templates/Default.html
-        layoutRootPaths {
-            10 = EXT:slub_web_boersenblatt/Resources/Private/Layouts
-        }
-        partialRootPaths {
-            10 = EXT:slub_web_boersenblatt/Resources/Private/Partials
-        }
-        templateRootPaths {
-            10 = EXT:slub_web_boersenblatt/Resources/Private/Templates
-        }
-        variables {
-                content < styles.content.get
-        }
-    }
-}
+################
+#### HELPER LIBS ####
+################
+<INCLUDE_TYPOSCRIPT: source="DIR:./Helper/" extensions="typoscript">
+
+##############
+#### BASE ####
+##############
+<INCLUDE_TYPOSCRIPT: source="DIR:./Base/" extensions="typoscript">
+
+##############
+#### PAGE ####
+##############
+<INCLUDE_TYPOSCRIPT: source="DIR:./Page/" extensions="typoscript">
+
+#################
+#### CONTENT ELEMENT ####
+#################
+<INCLUDE_TYPOSCRIPT: source="DIR:./Content/" extensions="typoscript">
+
+#################
+#### EXTENSION ####
+#################
+<INCLUDE_TYPOSCRIPT: source="DIR:./Extensions/" extensions="typoscript">
+
+#################
+#### CONDITION ####
+#################
+<INCLUDE_TYPOSCRIPT: source="DIR:./Condition/" extensions="typoscript">
+

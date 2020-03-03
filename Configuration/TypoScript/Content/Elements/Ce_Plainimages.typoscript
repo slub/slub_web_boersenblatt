@@ -1,0 +1,14 @@
+tt_content {
+  ce_plainimages >
+  ce_plainimages < lib.contentElement
+  ce_plainimages {
+    templateName = Ce_Plainimages
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references.fieldName = image
+        as = images
+      }
+    }
+  }
+}

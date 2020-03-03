@@ -1,0 +1,15 @@
+# Render Content Element in Tabs
+mod.wizards.newContentElement.renderMode = tabs
+mod.wizards.newContentElement.wizardItems.custom {
+    elements {
+      ce_plainimages {
+            iconIdentifier = ce_plainimages
+            title = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:ce_plainimages.title
+            description = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:ce_plainimages.description
+            tt_content_defValues {
+                CType = ce_plainimages
+            }
+        }
+    }
+    show := addToList(ce_plainimages)
+}

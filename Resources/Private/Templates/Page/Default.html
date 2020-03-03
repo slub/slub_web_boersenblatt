@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+
+    <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
+
+    <aside>
+        <div class="logo">
+            <f:link.page pageUid="{settings.pidRoot}">
+                <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/>
+            </f:link.page>
+        </div>
+
+        <f:render partial="MenuMain" arguments="{menuMain: menuMain}"/>
+        <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}"/>
+        <div class="partner">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}"/>
+        </div>
+    </aside>
+
+    <main>
+        <a id="menuslide"><span class="icon-menu"></span></a>
+        <f:if condition="{pageMedia}">
+            <div class="banner">
+                <div class="fadein">
+                    <f:for each="{pageMedia}" as="media" iteration="it">
+                        <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}"/>
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+
+        <footer>
+            <div class="logo">
+                <a href="#" title="zur Startseite">
+                    <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_0c_grau.svg" alt="Logo Börsenblatt digital"/>
+                </a>
+            </div>
+            <p>© 2020 Börsenblatt für den deutschen Buchhandel - Digital</p>
+        </footer>
+    </main>
+
+    <div class="cookie-message">Diese Seite nutzt Website Tracking-Technologien von Dritten, um ihre Dienste anzubieten, stetig zu verbessern und Werbung entsprechend der Interessen der Nutzer anzuzeigen. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern.
+        <a class="my-close-button" href>Akzeptieren</a>
+    </div>
+</f:spaceless>
+
+</html>

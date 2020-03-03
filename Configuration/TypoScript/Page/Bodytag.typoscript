@@ -1,0 +1,17 @@
+page {
+  bodyTagCObject = COA
+  bodyTagCObject {
+    stdWrap.wrap = <body | >
+    stdWrap.case = lower
+
+    10 = COA
+    10 {
+      stdWrap.noTrimWrap = | | |
+
+      10 = TEXT
+      10.value = id="top" itemscope itemtype="http://schema.org/WebPage"
+    }
+
+
+  }
+}
