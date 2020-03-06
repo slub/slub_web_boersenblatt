@@ -1,0 +1,41 @@
+
+/* ##################################################### */
+/* ############## INTERNET EXPLORER 11 ################# */
+/* ##################################################### */
+
+.ie11 {
+	[class^="col-"],
+	[class*=" col-"] {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> * {margin-bottom: 2em}
+	}
+
+	.col-2 { > * {width: 47%}}
+	.col-3 { > * {width: 30%}}
+	.col-4 { > * {width: 21%}}
+	.col-5 { > * {width: 17%}}
+
+	.banner {overflow: hidden; position: static;
+		img {
+			&.background {
+				height: auto !important;
+				width: 1700px;
+				max-width: 1700px;
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width : 768px) {
+
+	.ie11 {
+		.col-2 { > * {width: 100%}}
+		.col-3 { > * {width: 100%}}
+		.col-4 { > * {width: 100%}}
+		.col-5 { > * {width: 100%}}
+	}
+
+}

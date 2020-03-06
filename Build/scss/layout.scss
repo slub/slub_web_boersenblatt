@@ -5,6 +5,7 @@
 body {
 	margin-left: 370px;
 	text-align: center;
+	background-color: $color12;
 }
 
 /* ##################################################### */
@@ -47,15 +48,13 @@ aside {
 			li {
 				a,
 				strong {
-					font-family: vista-sans-narrow, sans-serif;
+					font-family: $heading-font-family;
+					font-weight: 400;
 					display: block;
 					padding: 0.7em 1em;
 					border-bottom: 1px solid $color7;
 					color: $color5;
-					font-size: 1em;
-					letter-spacing: 1px;
-					font-weight: 200;
-					font-size: 1.05em;
+					letter-spacing: .7px;
 				}
 			}
 		}
@@ -70,10 +69,9 @@ aside {
 				a,
 				strong {
 					padding: 0 0.8em;
-					letter-spacing: 1px;
+					letter-spacing: .7px;
 					font-size: 0.8em;
 					border: none;
-					font-weight: 200;
 				}
 			}
 		}
@@ -105,8 +103,8 @@ footer {
 	margin-top: 6em;
 	border-top: 1px solid $color7;
 	font-family: $heading-font-family;
-	font-weight: 200;
-	letter-spacing: 0.5px;
+	font-weight: 400;
+	letter-spacing: .7px;
 	.logo {
 		max-width: 300px;
 		margin: 0 auto 4em;
@@ -126,18 +124,10 @@ footer {
 	grid-gap: 3em;
 }
 
-.col-2 {
-	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-}
-.col-3 {
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-.col-4 {
-	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-}
-.col-5 {
-	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-}
+.col-2 {grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));}
+.col-3 {grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+.col-4 {grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));}
+.col-5 {grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));}
 
 .inner {
 	max-width: 1300px;
@@ -206,14 +196,32 @@ figure {
 	height: 100vh;
 	.bannercontent {
 		width: 100%;
-		padding: 2em;
+		padding: 2em 0;
 		height: 50vh;
 		display: flex;
 		flex-direction: column;
+		.logo {
+			display: none;
+			margin-bottom: 0;
+			padding: 2em 2em 0;	
+      		a {
+      			border: none;
+      			text-decoration: none;
+      			img {margin: 2em 0; max-width: 200px;}
+      		}
+      	}
 	}
 }
 
-.banner {
+.banner {position: relative; z-index: -1; 
+	&.scrollfade {transition: opacity 1.5s; opacity: 1; 
+		&.scrolled {opacity: .1}
+	}
+	&.nofade {opacity: .1;
+		img {
+			display: block !important;
+		}
+	}
 	img {
 		&.background {
 			position: fixed;
@@ -232,32 +240,11 @@ figure {
 	}
 }
 
-main {
-	.logo {
-		display: none;
-		width: 100%;
-		flex-grow: 1;
-		align-items: center;
-		justify-content: center;
-		margin: 2em 0;
-		a {
-			border: none;
-			img {
-				width: 200px;
-			}
-		}
-	}
-}
-
 .galerie {
 	list-style: none;
-	h2 {
-		font-size: 3em;
-		margin: 1.5em 0;
-	}
 	ul {
 		list-style: none;
-		margin: 0;
+		margin: 3em 0 0;
 		padding: 0;
 		li {
 			border: 1em solid $color4;
@@ -281,6 +268,7 @@ main {
 		display: flex;
 		flex-direction: column;
 		background-color: $color4;
+		img {object-fit: cover;}
 		h3 {
 			padding: 0.7em;
 			text-transform: none;
@@ -303,49 +291,40 @@ main {
 /* ############## RECHERCHE ############################ */
 /* ##################################################### */
 
-.recherche-bg {
-	height: 100vh;
-	background-size: cover;
-	background-image: url(/images/recherche/recherche_bg.jpg);
-	background-attachment: fixed;
-	position: fixed;
-	width: 100%;
-	opacity: 0.4;
-	z-index: -1;
-}
 
-.tx-dlf-listview form {
-	display: none;
-}
 .tx-dlf-sortinfo {
 	opacity: 0.8;
-	margin-top: 7em;
+	margin-top: 2em;
+	font-family: $heading-font-family;
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 
 .pagination {
-	background-color: $color4;
-	display: inline-block;
 	padding: 1em;
-	margin: 0.5em 0 0;
+    margin: 1em 2em;
+    background-color:rgba(247, 240, 227,.8);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.05);
 
 	.tx-dlf-pagebrowser {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		a,
 		span {
+			transition: none;
 			display: block;
-			padding: 0.7em 0;
-			margin: 0 0.2em;
+			padding: 1em .8em;
+			margin: 0.3em;
 			border: none;
 			line-height: 1;
-			width: 2.5em;
+			min-width: 3em;
+			font-family: $heading-font-family;
+			font-weight: 400;
+			background-color: $color4;
 		}
 		a:hover {
 			background-color: $color11;
-		}
-		.seperator {
-			width: auto;
-			padding: 0.7em 0.3em;
 		}
 		.active {
 			background-color: $color1;
@@ -354,6 +333,50 @@ main {
 		}
 	}
 }
+
+.tx-dlf-search-facets {
+	display: none
+}
+
+
+
+/* ##################################################### */
+/* ############## SUCHERGEBNISSE ####################### */
+/* ##################################################### */
+
+.tx-dlf-listview {
+
+	max-width: 900px;
+	margin: 0 auto;
+	font-family: $heading-font-family;
+	font-weight: 400;
+	letter-spacing: 1px;
+	h2 {padding: 1em 0; letter-spacing: 0}
+	.tx-dlf-search-numHits, .tx-dlf-listview-counts {opacity: .7; margin: 0;line-height: 1.5;}
+	
+	/* Dropdowns, noch klären ob notwendig */
+	> form {display: none}
+
+	ol {list-style: none; margin: 0; padding: 0;
+		.tx-dlf-listview-list {
+			img {border: 1em solid $color4;}
+		}
+		dl {
+			dd.tx-dlf-metadata-title {display: block; font-size: 1.2em; line-height: 1.2;}
+		}
+		ol {
+			li {padding: 1em;   margin: 1em 2em;   background-color:rgba(247, 240, 227,.8);    box-shadow: 0 0 30px 0 rgba(0,0,0,.05);
+				.tx-dlf-listview-thumbnail {}
+			}
+		}
+	}
+}
+
+
+
+/* ##################################################### */
+/* ######### SUCHERGEBNISSE ALTES MARKUP ############### */
+/* ##################################################### */
 
 .tx-dlf-abstracts {
 	max-width: 900px;
@@ -394,7 +417,7 @@ main {
 		position: absolute;
 		right: 0;
 		color: $color4;
-		font-weight: 700;
+		font-weight: 600;
 		font-size: 30px;
 		bottom: 0px;
 		padding: 0.3em 0.5em;
@@ -487,21 +510,28 @@ dt {
 
 .cookie-message {
 	position: fixed;
-	bottom: 0;
-	left: 0;
+	width: 70%;
+	max-width: 800px;
+	bottom: 2em;
+	left: 2em;
 	right: 0;
 	padding: 1em;
-	background: $color1;
 	z-index: 99;
-	color: $color4;
-	font-family: $heading-font-family;
-	font-weight: 200;
-	letter-spacing: 0.5px;
-	line-height: 1.4;
-	font-size: 0.9em;
-}
-.cookie-message a {
-	display: inline-block;
-	background-color: $color4;
-	padding: 0 0.5em;
+	font-size: 0.8em;
+	background-color:rgba(247, 240, 227,.8);
+    text-align: left;
+	.wrap {
+		background: $color4;
+		display: flex;
+		padding: 1em;
+		align-items: flex-end;
+		a {
+			display: block;
+			background-color: $color1;
+			padding: .5em 1em;
+			margin: 0 .5em .5em 3em;
+			color: $color4;
+			white-space: nowrap;
+		}
+	}
 }
