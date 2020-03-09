@@ -4,6 +4,10 @@ path {
   config = typo3conf/ext/slub_web_boersenblatt/Configuration
 }
 
+config.kitodo.templates {
+  search = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/Search.tmpl
+}
+
 template {
   navigation {
     main = 1
