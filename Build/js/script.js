@@ -37,9 +37,11 @@ $(document).ready(function() {
         var e = 200;
         var t = $(window).scrollTop();
         if (t > e) {
-            $("a.back-to-top").fadeIn()
+            $("a.back-to-top").fadeIn();
+            $(".banner").addClass("scrolled");
         } else {
             $("a.back-to-top").fadeOut()
+            $(".banner").removeClass("scrolled");
         }
     })
 
@@ -117,6 +119,7 @@ $(document).ready(function() {
     $("#menuslide").click(function() {
         event.stopPropagation();
         $("aside").toggleClass("show");
+        $(this).toggleClass('open');
     })
 
     $("main").click(function() {
@@ -127,18 +130,60 @@ $(document).ready(function() {
     /* ############## BACKGROUND IMAGE SLIDER ############## */
     /* ##################################################### */
 
-    $('.fadein img:gt(0)').hide();
+    /*$('.fadein img:gt(0)').hide();
 
     var slider = function() {
         $('.fadein :first-child').fadeOut(3000).next('img').fadeIn(3000).end().appendTo('.fadein');
     };
     setInterval(slider, 7000);
-    slider();
+    slider();*/
+
+    /* ##################################################### */
+    /* ########### BACKGROUND IMAGE SLIDER RANDOM ########## */
+    /* ##################################################### */
+
+    function random(n) {
+        return Math.floor(Math.random() * n);
+    }
+    var transition_time = 3000;
+    var waiting_time = 7000;
+    var images = $('div.fadein img');
+    var n = images.length;
+    var current = random(n);
+    images.hide();
+    images.eq(current).fadeIn(3000);
+
+
+    window.setInterval(swapImages, waiting_time);
+
+    function swapImages() {
+        
+        var $currentImg = $('.background:visible');
+        var $nextImg = $('.background:hidden').eq(Math.floor(Math.random() * $('.background:hidden').length));
+
+        // animation speed should be the same for both images so we have a smooth change
+        $currentImg.fadeOut(transition_time);
+        $nextImg.fadeIn(transition_time);
+    }
 
     /* ##################################################### */
     /* ############## COOKIEBAR ############################ */
     /* ##################################################### */
 
     $('.cookie-message').cookieBar({ closeButton : '.my-close-button' });
+
+    /* ##################################################### */
+    /* ############## IE10 & IE11 DETECTION ################ */
+    /* ##################################################### */
+
+    var ua = navigator.userAgent,
+        doc = document.documentElement;
+
+        if ((ua.match(/MSIE 10.0/i))) {
+        doc.className = doc.className + " ie10";
+
+        } else if((ua.match(/rv:11.0/i))){
+        doc.className = doc.className + " ie11";
+        }
 
 });

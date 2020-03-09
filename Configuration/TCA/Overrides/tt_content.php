@@ -18,8 +18,44 @@ $GLOBALS['TCA']['tt_content']['columns']['bodytext']['l10n_mode'] = 'prefixLangT
     'CType',
     [
         $pathLangFile . 'content.div_custom_content',
-        '--div--'
+        '--div--',
     ],
     '--div--',
     'before'
 );
+
+$GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image'] = [
+    'config' => [
+        'maxitems' => 1,
+        'minitems' => 0,
+    ],
+];
+
+$galleryCropConfiguration = [
+    'config' => [
+        'cropVariants' => [
+            'default' => [
+                'title' => $pathLangFile . 'imgwizard.crop_variant.gallery',
+                'coverAreas' => [],
+                'cropArea' => [],
+                'allowedAspectRatios' => [
+                    '4:5' => [
+                        'title' => $pathLangFile . 'imgwizard.crop_variant.gallery.ratio.default',
+                        'value' => 400 / 533
+                    ],
+                    'NaN' => [
+                        'title' => $pathLangFile . 'imgwizard.crop_variant.gallery.ratio.free',
+                        'value' => 0.0
+                    ],
+                ],
+                'selectedRatio' => '4:5.3',
+            ],
+        ],
+    ],
+];
+
+$GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']['overrideChildTca'] = [
+    'columns' => [
+        'crop' => $galleryCropConfiguration
+    ]
+];

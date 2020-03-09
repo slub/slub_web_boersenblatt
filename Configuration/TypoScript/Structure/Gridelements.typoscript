@@ -1,0 +1,21 @@
+lib.gridelements.defaultGridSetup {
+  columns {
+    default {
+      renderObj = COA
+      renderObj {
+        20 =< tt_content
+      }
+    }
+  }
+
+  cObject =< lib.contentElement
+  cObject {
+    templateName.field = tx_gridelements_backend_layout
+    templateName.ifEmpty = default
+    #        templateName.wrap = Structure/|
+    templateRootPaths {
+      100 = {$path.private}/Templates/Structure/
+    }
+
+  }
+}

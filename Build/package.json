@@ -3,15 +3,14 @@
 	"version": "1.0.0",
 	"description": "TYPO3 Sitepackage",
 	"license": "MIT",
-	"repository": "npm/npm",
 	"scripts": {
-		"css:dev": "onchange -i --poll 100  './scss/**/*.scss' -- time ./run/build-css.sh",
-		"css:fix": "./run/build-css.sh fix",
-		"js:dev": "onchange -i --poll 100  './js/**/*.js' -- time ./run/build-js.sh",
-		"dev": "npm run css:dev & npm run js:dev",
-		"dev:gulp": "npx gulp",
-		"prod": "./run/build-css.sh prod && ./run/build-js.sh prod",
-		"prod:gulp": "npx gulp buildProd"
+		"dev": "npx gulp",
+		"prod": "npx gulp prod"
+	},
+	"repository": "npm/npm",
+	"engines": {
+		"node": ">=12.0.0 <13.0.0",
+		"npm": ">=6.12.0 <=6.13.99"
 	},
 	"dependencies": {
 		"jquery": "^3.4",
@@ -20,25 +19,28 @@
 		"swiper": "^5.3"
 	},
 	"devDependencies": {
-		"acorn": "^7.1",
-		"concat-cli": "^4.0",
-		"concat-glob-cli": "^0.1.0",
-		"csso-cli": "^3.0",
+		"acorn": "^7.1.1",
+		"del": "^5.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-standard": "^14.1",
 		"eslint-plugin-import": "^2.20",
 		"eslint-plugin-node": "^11.0",
 		"eslint-plugin-promise": "^4.2",
 		"eslint-plugin-standard": "^v4.0",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^7.0",
+		"gulp-cli": "^2.2.0",
+		"gulp-concat": "^2.6.0",
+		"gulp-csso": "^4.0.0",
+		"gulp-if": "^3.0.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-terser": "^1.2.0",
 		"node-sass": "^4.13",
-		"onchange": "^6.1.0",
-		"postcss-cli": "^7.1.0",
-		"rimraf": "^3.0.0",
 		"standard": "^14.3.1",
-		"stylelint-config-standard": "^19.0",
-		"stylelint-scss": "^3.13",
 		"stylelint": "^12.0.1",
-		"uglify-js": "^3.7.4"
+		"stylelint-config-standard": "^19.0",
+		"stylelint-scss": "^3.13"
 	},
 	"browserslist": [
 		"last 2 version",
@@ -54,7 +56,10 @@
 		"parserOptions": {
 			"ecmaVersion": 6,
 			"sourceType": "script",
-			"indent": ["error", 4]
+			"indent": [
+				"error",
+				4
+			]
 		}
 	},
 	"stylelint": {

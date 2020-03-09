@@ -1,34 +1,37 @@
 {
-  "name": "slub/slub-web-boersenblatt",
-  "description": "Website configuration and templates of Boersenblatt Digital (www.boersenblat-digital.de)",
-  "type": "typo3-cms-extension",
-  "homepage": "https://github.com/slub/slub_web_boersenblatt",
-  "readme": "README.md",
-  "license": ["GPL-3.0-or-later"],
-  "authors": [
-    {
-      "name": "Alexander Bigga",
-      "email": "alexander.bigga@slub-dresden.de",
-      "homepage": "https://www.slub-dresden.de",
-      "role": "maintainer"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/slub/slub_web_boersenblatt/issues",
-    "source": "https://github.com/slub/slub_web_boersenblatt"
-  },
-  "require": {
-    "typo3/cms-core": "^9.5",
-    "kitodo/presentation": "dev-master"
-  },
-  "autoload": {
-    "psr-4": {
-      "Slub\\Boersenblatt\\": "Classes/"
-    }
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "slub_web_boersenblatt"
-    }
-  }
+	"name": "slub/slub-web-boersenblatt",
+	"description": "Website configuration and templates of Boersenblatt Digital (www.boersenblat-digital.de)",
+	"type": "typo3-cms-extension",
+	"homepage": "https://github.com/slub/slub_web_boersenblatt",
+	"readme": "README.md",
+	"license": [
+		"GPL-3.0-or-later"
+	],
+	"authors": [
+		{
+			"name": "Alexander Bigga",
+			"email": "alexander.bigga@slub-dresden.de",
+			"homepage": "https://www.slub-dresden.de",
+			"role": "maintainer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/slub/slub_web_boersenblatt/issues",
+		"source": "https://github.com/slub/slub_web_boersenblatt"
+	},
+	"require": {
+		"typo3/cms-core": "^9.5",
+		"gridelementsteam/gridelements": "^9.5",
+		"kitodo/presentation": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Slub\\Boersenblatt\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "slub_web_boersenblatt"
+		}
+	}
 }

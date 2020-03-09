@@ -1,0 +1,9 @@
+##############
+#### PAGE ####
+##############
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:slub_web_boersenblatt/Configuration/TsConfig/Page/" extensions="tsconfig">
+
+###################
+#### STRUCTURE ####
+###################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:slub_web_boersenblatt/Configuration/TsConfig/Structure/" extensions="tsconfig">

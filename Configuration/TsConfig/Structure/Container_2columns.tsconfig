@@ -1,0 +1,25 @@
+tx_gridelements.setup {
+    container_2columns {
+        title = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:structure.container_2columns
+        icon = EXT:slub_web_boersenblatt/Resources/Public/Icons/Structure/Container_2columns.svg
+        flexformDS =
+        config {
+            colCount = 2
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:structure.column.left
+                            colPos = 10
+                        }
+                        2 {
+                            name = LLLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:structure.column.right
+                            colPos = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+tt_content.gridelements_pi1.20.10.setup {
+  container_2columns < lib.gridelements.defaultGridSetup
+  container_2columns {
+    cObject {
+      templateName >
+      templateName = Container_2columns
+
+      dataProcessing {
+        10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+        10 {
+          default {
+            as = children
+            options {
+              sortingDirection = ASC
+              sortingField = sorting
+              recursive = 0
+              resolveFlexFormData = 1
+              resolveBackendLayout = 1
+              respectColumns = 1
+              respectRows = 1
+            }
+          }
+        }
+
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+          references.fieldName = media
+        }
+      }
+
+      settings {
+        SType = container_2columns
+      }
+    }
+  }
+}
