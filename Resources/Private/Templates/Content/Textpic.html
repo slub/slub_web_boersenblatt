@@ -6,13 +6,13 @@
         <f:if condition="{files.0}">
             <figure>
                 <a href="{f:uri.image(image: files.0)}" data-rel="lightcase:Galerie">
-                    <f:image image="{files.0}" width="300"/>
+                    <f:image image="{files.0}" width="400"/>
                 </a>
             </figure>
         </f:if>
 
         <div class="infos">
-            <h2>{data.header}</h2>
+            <f:if condition="{data.header}"><h2>{data.header}</h2></f:if>
             <f:format.html>{data.bodytext}</f:format.html>
         </div>
     </article>

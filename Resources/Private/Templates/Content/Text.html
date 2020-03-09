@@ -4,7 +4,7 @@
 <div class="{data.layout}">
     <article>
         <div class="infos">
-            <h2>{data.header}</h2>
+            <f:if condition="{data.header}"><h2>{data.header}</h2></f:if>
             <f:format.html>{data.bodytext}</f:format.html>
         </div>
     </article>
