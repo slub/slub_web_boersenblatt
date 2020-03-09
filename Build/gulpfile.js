@@ -14,7 +14,7 @@ const paths = {
       './scss/main.scss'
     ],
     watch: './scss/**/*.scss',
-    dest: '../Resources/Public/Styles'
+    dest: '../Resources/Public/Styles/'
   },
   js: {
     src: [
@@ -25,7 +25,7 @@ const paths = {
       './js/*.js'
     ],
     watch: './js/**/*.js',
-    dest: '../Resources/Public/JavaScript'
+    dest: '../Resources/Public/JavaScript/'
   }
 }
 
@@ -65,7 +65,7 @@ function js (done) {
   })
   src(paths.js.src)
     .pipe(cond(!PRODUCTION, sourcemaps.init()))
-    .pipe(concat('app.js'))
+    .pipe(concat('script.js'))
     .pipe(cond(PRODUCTION, terser({
       ecma: 6,
       mangle: true
