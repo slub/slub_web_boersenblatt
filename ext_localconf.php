@@ -17,6 +17,10 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $extensionKey . '/Configuration/TsConfig/Page/" extensions="tsconfig">'
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTsConfig(
+            '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $extensionKey . '/Configuration/TsConfig/Structure/" extensions="tsconfig">'
+        );
+
         //register rte settings
         $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sitepackage_default'] =
             'EXT:' . $extensionKey . '/Configuration/Yaml/Rte/Default.yaml';

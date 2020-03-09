@@ -73,10 +73,13 @@ TCEFORM {
 
     layout {
       disabled = 0
+      removeItems = 1,2,3
+      altLabels.1 =
+      addItems.inner = Main Content Element
     }
 
     frame_class {
-      disabled = 0
+      disabled = 1
       removeItems (
 #          default,
 #          ruler-before,

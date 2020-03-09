@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-02-26T11:15:41Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-09T10:18:10Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
 			<trans-unit id="backend_layout.colpos.0">
@@ -34,6 +34,18 @@
 			<trans-unit id="newcontentelement.custom.title">
 				<source>Slub Elements</source>
 				<target>Slub Elemente</target>
+			</trans-unit>
+			<trans-unit id="structure.container_2columns">
+				<source>Two Column Container</source>
+				<target>Zwei Spalten Kontainer</target>
+			</trans-unit>
+			<trans-unit id="structure.column.left">
+				<source>Left Column</source>
+				<target>Linke Spalte</target>
+			</trans-unit>
+			<trans-unit id="structure.column.right">
+				<source>Right Column</source>
+				<target>Rechte Spalte</target>
 			</trans-unit>
 		</body>
 	</file>

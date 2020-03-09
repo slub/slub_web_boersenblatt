@@ -13,6 +13,11 @@
 ##############
 <INCLUDE_TYPOSCRIPT: source="DIR:./Page/" extensions="typoscript">
 
+##############
+#### STRUCTURE ####
+##############
+<INCLUDE_TYPOSCRIPT: source="DIR:./Structure/" extensions="typoscript">
+
 #################
 #### CONTENT ELEMENT ####
 #################
