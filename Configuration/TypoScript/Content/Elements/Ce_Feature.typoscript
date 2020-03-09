@@ -1,0 +1,27 @@
+tt_content {
+  ce_feature >
+  ce_feature < lib.contentElement
+  ce_feature {
+    templateName = Ce_Feature
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+      10 {
+        table = ce_feature_item
+        pidInList.field = pid
+        where {
+          data = field:uid
+          intval = 1
+          wrap = tt_content=|
+        }
+        orderBy = sorting
+
+        dataProcessing {
+          10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+          10 {
+            references.fieldName = image
+          }
+        }
+      }
+    }
+  }
+}

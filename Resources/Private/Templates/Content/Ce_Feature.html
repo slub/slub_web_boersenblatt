@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div id="feature" class="inner">
+    <div class="feature-wrap col-3">
+        <f:for each="{records}" as="feature">
+            <div class="feature">
+                <f:image image="{feature.files.0}" />
+                <h3>{feature.data.header}</h3>
+                {feature.data.bodytext -> f:format.html()}
+                <f:link.typolink parameter="{feature.data.link}" class="button">{feature.data.linktext}</f:link.typolink>
+            </div>
+        </f:for>
+    </div>
+
+    <div class="arrow bounce">
+        <a href="#news"><span class="icon-arrow-down"></span></a>
+    </div>
+</div>
+
+</html>

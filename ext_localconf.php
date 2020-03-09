@@ -33,6 +33,8 @@ call_user_func(
             //Content
             $icons = [
                 'ce_plainimages' => 'image',
+                'ce_feature' => 'columns',
+                'ce_feature_item' => 'square-o',
                 ];
 
             foreach ($icons as $key => $icon) {
