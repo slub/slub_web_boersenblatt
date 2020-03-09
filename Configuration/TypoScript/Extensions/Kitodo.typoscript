@@ -1,3 +1,7 @@
 plugin.tx_dlf_search {
     templateFile = {$config.kitodo.templates.search}
 }
+
+plugin.tx_dlf_listview {
+    templateFile = {$config.kitodo.templates.listview}
+}
