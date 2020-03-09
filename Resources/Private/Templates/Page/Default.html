@@ -22,7 +22,7 @@
     <main>
         <a id="menuslide"><span class="icon-menu"></span></a>
         <f:if condition="{pageMedia}">
-            <div class="banner">
+            <div class="banner scrollfade">
                 <div class="fadein">
                     <f:for each="{pageMedia}" as="media" iteration="it">
                         <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}"/>
@@ -34,11 +34,6 @@
         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
 
         <footer>
-            <div class="logo">
-                <a href="#" title="zur Startseite">
-                    <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_0c_grau.svg" alt="Logo Börsenblatt digital"/>
-                </a>
-            </div>
             <p>© <f:format.date format="Y">now</f:format.date> Börsenblatt für den deutschen Buchhandel - Digital</p>
         </footer>
     </main>
