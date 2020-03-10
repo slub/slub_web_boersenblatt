@@ -7,13 +7,14 @@ mod {
         config {
           backend_layout {
             colCount = 12
-            rowCount = 7
+            rowCount = 6
             rows {
               1 {
                 columns {
                   1 {
                     name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
                     colspan = 4
+                    rowspan = 5
                   }
 
                   2 {
@@ -26,11 +27,6 @@ mod {
 
               2 {
                 columns {
-                  1 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
-                    colspan = 4
-                  }
-
                   2 {
                     name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.21
                     colPos = 21
@@ -41,11 +37,6 @@ mod {
 
               3 {
                 columns {
-                  1 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
-                    colspan = 4
-                  }
-
                   2 {
                     name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.22
                     colPos = 22
@@ -56,11 +47,6 @@ mod {
 
               4 {
                 columns {
-                  1 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
-                    colspan = 4
-                  }
-
                   2 {
                     name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.23
                     colPos = 23
@@ -71,6 +57,16 @@ mod {
 
               5 {
                 columns {
+                  2 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.0
+                    colPos = 0
+                    colspan = 8
+                  }
+                }
+              }
+
+              6 {
+                columns {
                   1 {
                     name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.30
                     colPos = 30
@@ -78,8 +74,7 @@ mod {
                   }
 
                   2 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.0
-                    colPos = 0
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
                     colspan = 8
                   }
                 }
