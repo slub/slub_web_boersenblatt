@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-09T16:14:09Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-10T09:20:17Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
 			<trans-unit id="backend_layout.colpos.0">
-				<source>Main Content</source>
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.20">
+				<source>Home</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.21">
+				<source>Feature</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.22">
+				<source>News</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.23">
+				<source>Gallery
+</source>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.30">
 				<source>Partner Logos</source>
@@ -14,6 +27,12 @@
 			</trans-unit>
 			<trans-unit id="backend_layout.default">
 				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="ce_elements.palettes.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="ce_feature.description">
+				<source>Feature Elements for Home</source>
 			</trans-unit>
 			<trans-unit id="ce_feature.title">
 				<source>Feature Elements</source>
@@ -65,12 +84,6 @@
 			</trans-unit>
 			<trans-unit id="structure.container_2columns">
 				<source>Two Column Container</source>
-			</trans-unit>
-			<trans-unit id="ce_elements.palettes.general">
-				<source>General</source>
-			</trans-unit>
-			<trans-unit id="ce_feature.description">
-				<source>Feature Elements for Home</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -5,22 +5,16 @@
 
     <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
 
-    <aside>
-        <div class="logo">
-            <f:link.page pageUid="{settings.pidRoot}">
-                <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/>
-            </f:link.page>
-        </div>
-
-        <f:render partial="MenuMain" arguments="{menuMain: menuMain}"/>
-        <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}"/>
-        <div class="partner">
-            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}"/>
-        </div>
-    </aside>
+    <f:render partial="Aside" arguments="{_all}"/>
 
     <main>
-        <a id="menuslide"><span class="icon-menu"></span></a>
+        <a id="menuslide">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
         <f:if condition="{pageMedia}">
             <div class="banner scrollfade">
                 <div class="fadein">
@@ -38,12 +32,7 @@
         </footer>
     </main>
 
-    <div class="cookie-message">
-        <div class="wrap">
-            <div class="cookietext">Diese Seite nutzt Website Tracking-Technologien von Dritten, um ihre Dienste anzubieten, stetig zu verbessern und Werbung entsprechend der Interessen der Nutzer anzuzeigen. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern.</div>
-            <a class="my-close-button">Akzeptieren</a>
-        </div>
-    </div>
+    <f:render partial="CookieMessage" arguments="{_all}"/>
 </f:spaceless>
 
 </html>

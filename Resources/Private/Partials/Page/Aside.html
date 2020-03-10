@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<aside>
+    <div class="logo">
+        <f:link.page pageUid="{settings.pidRoot}">
+            <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/>
+        </f:link.page>
+    </div>
+
+    <f:render partial="MenuMain" arguments="{menuMain: menuMain}"/>
+    <f:render partial="MenuFooter" arguments="{menuFooter: menuFooter}"/>
+    <div class="partner">
+        <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '30'}"/>
+    </div>
+</aside>
+
+</html>
