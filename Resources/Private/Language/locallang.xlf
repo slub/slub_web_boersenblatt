@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-10T09:20:17Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-10T12:26:11Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
 			<trans-unit id="backend_layout.colpos.0">
@@ -27,6 +27,9 @@
 			</trans-unit>
 			<trans-unit id="backend_layout.default">
 				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.home">
+				<source>Home</source>
 			</trans-unit>
 			<trans-unit id="ce_elements.palettes.general">
 				<source>General</source>

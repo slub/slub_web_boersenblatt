@@ -30,6 +30,12 @@ call_user_func(
                 ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/Default.svg']
             );
 
+            $iconRegistry->registerIcon(
+                'belayout-home',
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/Home.svg']
+            );
+
             //Content
             $icons = [
                 'ce_plainimage' => 'image',
