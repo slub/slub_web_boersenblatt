@@ -75,13 +75,9 @@ function js (done) {
   done()
 }
 
-function observe (done) {
-  if (!PRODUCTION) {
-    watch(paths.scss.watch, scss)
-    watch(paths.js.watch, js)
-  } else {
-    done()
-  }
+function observe () {
+  watch(paths.scss.watch, scss)
+  watch(paths.js.watch, js)
 }
 
 exports.default = series(
@@ -95,6 +91,5 @@ exports.prod = series(
   setProduction,
   parallel(
     scss, js
-  ),
-  observe
+  )
 )
