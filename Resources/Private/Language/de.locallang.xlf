@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-10T12:26:11Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-11T07:58:40Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
+			<trans-unit id="backend_layout.about">
+				<source>About</source>
+				<target>Über</target>
+			</trans-unit>
 			<trans-unit id="backend_layout.colpos.0">
 				<source>Content</source>
 				<target>Inhalte</target>
@@ -115,6 +119,10 @@
 			<trans-unit id="structure.container_2columns">
 				<source>Two Column Container</source>
 				<target>Zwei Spalten Kontainer</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.4">
+				<source>Header</source>
+				<target>Überschrift</target>
 			</trans-unit>
 		</body>
 	</file>

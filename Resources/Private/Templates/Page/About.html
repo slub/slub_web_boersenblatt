@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+
+    <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
+
+    <f:render partial="Aside" arguments="{_all}"/>
+
+    <main>
+        <a id="menuslide">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        <f:if condition="{pageMedia}">
+            <div class="banner scrollfade">
+                <div class="fadein">
+                    <f:for each="{pageMedia}" as="media" iteration="it">
+                        <f:image image="{media}" class="background{f:if(condition: it.isFirst, then: ' first')}"/>
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '4'}"/>
+
+        <div class="inner">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+        </div>
+
+        <footer>
+            <p>©
+                <f:format.date format="Y">now</f:format.date>
+                Börsenblatt für den deutschen Buchhandel - Digital
+            </p>
+        </footer>
+    </main>
+
+    <f:render partial="CookieMessage" arguments="{_all}"/>
+</f:spaceless>
+
+</html>
