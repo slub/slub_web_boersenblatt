@@ -4,16 +4,29 @@ path {
   config = typo3conf/ext/slub_web_boersenblatt/Configuration
 }
 
-config.kitodo.templates {
-  search = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/Search.tmpl
-  listview = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/ListView.tmpl
+config {
+  kitodo {
+    templates {
+      search = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/Search.tmpl
+      listview = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/ListView.tmpl
+    }
+  }
+  matomo {
+    # matomo configuration (maybe overwritten)
+    # cat=plugin.tx_slubwebboersenblatt/matomo/0210; type=string; label=Matomo Hostname
+    hostname = matomo.slub-dresden.de
+    # cat=plugin.tx_slubwebboersenblatt/matomo/0220; type=int+; label=Matomo Idsite
+    siteId =
+    # cat=plugin.tx_slubwebboersenblatt/matomo/0230; type=string; label=Matomo Domains (optional)
+    setDomains =
+    }
 }
 
 template {
   navigation {
-    # cat=plugin.tx_slubwebboersenblatt/links/0320; type=int+; label=Root Page Pid
+    # cat=plugin.tx_slubwebboersenblatt/links/0100; type=int+; label=Root Page Pid
     main = 1
-    # cat=plugin.tx_slubwebboersenblatt/links/0320; type=int+; label=Footer Navigation Pid
+    # cat=plugin.tx_slubwebboersenblatt/links/0110; type=int+; label=Footer Navigation Pid
     footer = 6
   }
 }

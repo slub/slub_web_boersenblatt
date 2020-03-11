@@ -46,6 +46,11 @@ page {
 
     settings {
       pidRoot = {$template.navigation.main}
+      matomo {
+        hostname = {$config.matomo.hostname}
+        siteId = {$config.matomo.siteId}
+        setDomains = {$config.matomo.setDomains}
+      }
     }
   }
 }

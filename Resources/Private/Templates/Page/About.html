@@ -1,11 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+<f:layout name="Default" />
+
+
 <f:spaceless>
-
-    <a href="#top" class="back-to-top"><span class="icon-arrow-up"></span></a>
-
-    <f:render partial="Aside" arguments="{_all}"/>
+    <f:section name="MainContent">
 
     <main>
         <a id="menuslide">
@@ -39,7 +39,7 @@
         </footer>
     </main>
 
-    <f:render partial="CookieMessage" arguments="{_all}"/>
+    </f:section>
 </f:spaceless>
 
 </html>
