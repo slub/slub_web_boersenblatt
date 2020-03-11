@@ -43,8 +43,7 @@ mod {
                     colspan = 4
                   }
                   2 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.0
-                    colPos = 20
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
                     colspan = 8
                   }
                 }
