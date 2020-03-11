@@ -26,56 +26,10 @@
         </f:if>
 
         <div class="home">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}"/>
             <div class="arrow bounce">
                 <a href="#feature"><span class="icon-arrow-down"></span></a>
             </div>
-
-            <div class="bannercontent">
-                <div class="logo">
-                    <f:link.page pageUid="{settings.pidRoot}">
-                        <f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Link zur Startseite"/>
-                    </f:link.page>
-                </div>
-
-                <!-- BEGIN: Content of extension 'dlf', plugin 'Search' -->
-
-                <div class="tx-dlf-search">
-                    <form class="tx-dlf-search-form" action="/recherche" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="tx-dlf-search-query">*</label>
-                            <!-- Never change the @id of this input field! Otherwise search suggestions won't work! -->
-                            <input type="text" id="tx-dlf-search-query" name="tx_dlf[query]" value="" placeholder="im Börsenblatt suchen nach:" autocomplete="off" aria-autocomplete="list" aria-haspopup="true" class="ui-autocomplete-input">
-
-                            <!-- The following element is needed for auto-completion! -->
-                            <div id="tx-dlf-search-suggest">
-                                <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
-                            </div>
-
-                            <!-- Originalcode:
-
-                            <input type="submit" value="Suchen">
-
-                            benötigt wird aber: -->
-
-                            <button type="submit"><span class="icon-search"></span></button>
-
-                            <input class="tx-dlf-search-fulltext" id="tx-dlf-search-fulltext-no" type="radio" name="tx_dlf[fulltext]" value="0" checked="checked">
-                            <label for="tx-dlf-search-fulltext-no">in Metadaten</label>
-                            <input class="tx-dlf-search-fulltext" id="tx-dlf-search-fulltext-yes" type="radio" name="tx_dlf[fulltext]" value="1">
-                            <label for="tx-dlf-search-fulltext-yes">im Volltext</label>
-
-                            <input type="hidden" name="tx_dlf[encrypted]" value="PTCJ+gU5w1s=">
-                            <input type="hidden" name="tx_dlf[hashed]" value="279512f1dc4bceaa929c">
-
-                        </div>
-                    </form>
-
-                </div>
-
-                <!-- END: Content of extension 'dlf', plugin 'Search' -->
-
-            </div>
-            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}"/>
         </div>
 
         <div id="feature" class="inner">
