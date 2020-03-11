@@ -38,7 +38,7 @@ page {
       # Footer Menu
       20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       20 {
-        special = list
+        special = directory
         special.value = {$template.navigation.footer}
         as = menuFooter
       }

@@ -11,8 +11,10 @@ config.kitodo.templates {
 
 template {
   navigation {
+    # cat=plugin.tx_slubwebboersenblatt/links/0320; type=int+; label=Root Page Pid
     main = 1
-    footer = 6,7,8
+    # cat=plugin.tx_slubwebboersenblatt/links/0320; type=int+; label=Footer Navigation Pid
+    footer = 6
   }
 }
 
