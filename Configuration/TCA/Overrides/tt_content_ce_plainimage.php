@@ -1,7 +1,7 @@
 <?php
 defined('TYPO3_MODE') || die();
 
-$ce_element_name = 'ce_plainimages';
+$ce_element_name = 'ce_plainimage';
 $pathLangFile = 'LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:';
 
 /***************

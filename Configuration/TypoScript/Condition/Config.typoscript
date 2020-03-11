@@ -1,6 +1,7 @@
 ### https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Conditions/Index.html ###
 
-[applicationContext = Development*] || [applicationContext = Testing/Local]
+// [getTSFE() && getTSFE().isBackendUserLoggedIn() && like (applicationContext, "Development/*")]
+[like (applicationContext, "Development/*")]
   config {
     contentObjectExceptionHandler = 0
     admPanel = 1

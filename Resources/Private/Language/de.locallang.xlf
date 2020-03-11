@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-09T14:35:59Z" product-name="slub_web_boersenblatt">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-11T07:58:40Z" product-name="slub_web_boersenblatt">
 		<header/>
 		<body>
+			<trans-unit id="backend_layout.about">
+				<source>About</source>
+				<target>Über</target>
+			</trans-unit>
 			<trans-unit id="backend_layout.colpos.0">
-				<source>Main Content</source>
-				<target>Hauptinhalte</target>
+				<source>Content</source>
+				<target>Inhalte</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.20">
+				<source>Home</source>
+				<target>Home</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.21">
+				<source>Feature</source>
+				<target>Feature</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.22">
+				<source>News</source>
+				<target>News</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.23">
+				<source>Gallery
+</source>
+				<target>Galerie</target>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.30">
 				<source>Partner Logos</source>
@@ -19,13 +40,53 @@
 				<source>Default</source>
 				<target>Standard</target>
 			</trans-unit>
-			<trans-unit id="ce_plainimages.description">
+			<trans-unit id="backend_layout.home">
+				<source>Home</source>
+				<target>Home</target>
+			</trans-unit>
+			<trans-unit id="ce_elements.palettes.general">
+				<source>General</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="ce_feature.description">
+				<source>Feature Elements for Home</source>
+				<target>Teaser für Home</target>
+			</trans-unit>
+			<trans-unit id="ce_feature.title">
+				<source>Feature Elements</source>
+				<target>Feature Elemente</target>
+			</trans-unit>
+			<trans-unit id="ce_feature_item.title">
+				<source>Feature Element</source>
+				<target>Feature Element</target>
+			</trans-unit>
+			<trans-unit id="ce_field_header.label_default">
+				<source>Header</source>
+				<target>Überschrift</target>
+			</trans-unit>
+			<trans-unit id="ce_field_image.label_default">
+				<source>Image</source>
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="ce_field_link.label_default">
+				<source>Link</source>
+				<target>Link</target>
+			</trans-unit>
+			<trans-unit id="ce_field_linktext.label_default">
+				<source>Link Label</source>
+				<target>Linktext</target>
+			</trans-unit>
+			<trans-unit id="ce_field_text.label_default">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="ce_plainimage.description">
 				<source>Simple Images used for Partner Logos.</source>
 				<target>Einfache Bilder für Partner Logos.</target>
 			</trans-unit>
-			<trans-unit id="ce_plainimages.title">
-				<source>Plain Images</source>
-				<target>Einfache Bilder</target>
+			<trans-unit id="ce_plainimage.title">
+				<source>Plain Image</source>
+				<target>Einfaches Bild</target>
 			</trans-unit>
 			<trans-unit id="content.div_custom_content">
 				<source>Slub Elements</source>
@@ -58,6 +119,10 @@
 			<trans-unit id="structure.container_2columns">
 				<source>Two Column Container</source>
 				<target>Zwei Spalten Kontainer</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.colpos.4">
+				<source>Header</source>
+				<target>Überschrift</target>
 			</trans-unit>
 		</body>
 	</file>

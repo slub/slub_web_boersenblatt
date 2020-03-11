@@ -2,20 +2,18 @@
       data-namespace-typo3-fluid="true"
 >
 
-<div class="galerie inner">
-    <f:if condition="{data.header}"><h2>{data.header}</h2></f:if>
-    <ul class="col-4">
-        <f:if condition="{files}">
-            <f:for each="{files}" as="image">
-                <li>
-                    <figure>
-                        <a href="{f:uri.image(image: image)}" data-rel="lightcase:Galerie">
-                            <f:image image="{image}" width="400" height="533c"/>
-                        </a>
-                    </figure>
-                </li>
-            </f:for>
-        </f:if>
-    </ul>
-</div>
+<f:if condition="{data.header}"><h2>{data.header}</h2></f:if>
+<ul class="col-4">
+    <f:if condition="{files}">
+        <f:for each="{files}" as="image">
+            <li>
+                <figure>
+                    <a href="{f:uri.image(image: image)}" data-rel="lightcase:Galerie">
+                        <f:image image="{image}" width="400" height="533c"/>
+                    </a>
+                </figure>
+            </li>
+        </f:for>
+    </f:if>
+</ul>
 </html>

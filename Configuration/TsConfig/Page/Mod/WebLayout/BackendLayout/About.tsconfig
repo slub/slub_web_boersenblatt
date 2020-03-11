@@ -1,0 +1,57 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      about {
+        title = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.about
+        icon = belayout-about
+        config {
+          backend_layout {
+            colCount = 12
+            rowCount = 3
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
+                    colspan = 4
+                    rowspan = 2
+                  }
+
+                  2 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.4
+                    colPos = 4
+                    colspan = 8
+                  }
+                }
+              }
+
+              2 {
+                columns {
+                  2 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.0
+                    colPos = 0
+                    colspan = 8
+                  }
+                }
+              }
+
+              3 {
+                columns {
+                  1 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.30
+                    colPos = 30
+                    colspan = 4
+                  }
+                  2 {
+                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.empty
+                    colspan = 8
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

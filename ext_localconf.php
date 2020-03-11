@@ -30,9 +30,23 @@ call_user_func(
                 ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/Default.svg']
             );
 
+            $iconRegistry->registerIcon(
+                'belayout-home',
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/Home.svg']
+            );
+
+            $iconRegistry->registerIcon(
+                'belayout-about',
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:' . $extensionKey . '/Resources/Public/Icons/Page/About.svg']
+            );
+
             //Content
             $icons = [
-                'ce_plainimages' => 'image',
+                'ce_plainimage' => 'image',
+                'ce_feature' => 'columns',
+                'ce_feature_item' => 'square-o',
                 ];
 
             foreach ($icons as $key => $icon) {
