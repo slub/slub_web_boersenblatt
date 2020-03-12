@@ -5,10 +5,18 @@ const cond = require('gulp-if')
 const csso = require('gulp-csso')
 const del = require('del')
 const sass = require('gulp-sass')
+const less = require('gulp-less')
 const sourcemaps = require('gulp-sourcemaps')
 const terser = require('gulp-terser')
 
 const paths = {
+  less: {
+    src: [
+      './less/Digitalcollections.less'
+    ],
+    watch: './less/**/*.less',
+    dest: '../Resources/Public/Styles/'
+  },
   scss: {
     src: [
       './scss/main.scss'
@@ -57,6 +65,20 @@ function scss (done) {
   done()
 }
 
+function lessrun (done) {
+  del([
+    paths.less.dest + '*.*'
+  ], {
+    force: true
+  })
+  src(paths.less.src)
+    .pipe(less({
+    }))
+    .pipe(autoprefixer())
+    .pipe(dest(paths.less.dest))
+  done()
+}
+
 function js (done) {
   del([
     paths.js.dest + '*.*'
@@ -77,12 +99,13 @@ function js (done) {
 
 function observe () {
   watch(paths.scss.watch, scss)
+  watch(paths.less.watch, lessrun)
   watch(paths.js.watch, js)
 }
 
 exports.default = series(
   parallel(
-    scss, js
+    scss, lessrun, js
   ),
   observe
 )
@@ -90,6 +113,6 @@ exports.default = series(
 exports.prod = series(
   setProduction,
   parallel(
-    scss, js
+    scss, lessrun, js
   )
 )
