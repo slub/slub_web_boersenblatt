@@ -2262,8 +2262,7 @@ body.calendar .step-back-button {
 .tx-dlf-calendar .calendar-view table tr td {
   color: #116677;
 }
-.tx-dlf-calendar .calendar-view table tr td h4,
-.tx-dlf-calendar .calendar-view table tr td .day-label {
+.tx-dlf-calendar .calendar-view table tr td h4 {
   position: relative;
   color: #116677;
   transition: all 0.3s ease-out;
@@ -2271,8 +2270,7 @@ body.calendar .step-back-button {
   display: block;
   border: 1px solid transparent;
 }
-.tx-dlf-calendar .calendar-view table tr td h4:after,
-.tx-dlf-calendar .calendar-view table tr td .day-label:after {
+.tx-dlf-calendar .calendar-view table tr td h4:after {
   position: absolute;
   top: 19px;
   left: 50%;
@@ -2293,7 +2291,7 @@ body.calendar .step-back-button {
   background: #e6f5f7;
   border-radius: 100%;
 }
-.no-touchevents .tx-dlf-calendar .calendar-view table tr td {
+.no-touchevents .tx-dlf-calendar .calendar-view table tr td h4 {
   cursor: pointer;
 }
 .tx-dlf-calendar .calendar-view table tr td ul {
@@ -2316,12 +2314,10 @@ body.calendar .step-back-button {
   padding: 10px;
   color: #fff;
 }
-.tx-dlf-calendar .calendar-view table tr td.open h4,
-.tx-dlf-calendar .calendar-view table tr td.open .day-label {
+.tx-dlf-calendar .calendar-view table tr td.open h4 {
   transform: scale(1.2);
 }
-.tx-dlf-calendar .calendar-view table tr td.open h4:after,
-.tx-dlf-calendar .calendar-view table tr td.open .day-label:after {
+.tx-dlf-calendar .calendar-view table tr td.open h4:after {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2423,8 +2419,7 @@ body.calendar .step-back-button {
   .tx-dlf-calendar .calendar-view .month table tr td {
     position: relative;
   }
-  .tx-dlf-calendar .calendar-view .month table tr td h4,
-  .tx-dlf-calendar .calendar-view .month table tr td .day-label {
+  .tx-dlf-calendar .calendar-view .month table tr td h4 {
     padding: 5px;
   }
   .tx-dlf-calendar .calendar-view .month table tr td ul {
@@ -2433,12 +2428,10 @@ body.calendar .step-back-button {
     padding: 0 10px;
     transform: translateX(-50%);
   }
-  .tx-dlf-calendar .calendar-view .month table tr td.open h4,
-  .tx-dlf-calendar .calendar-view .month table tr td.open .day-label {
+  .tx-dlf-calendar .calendar-view .month table tr td.open h4 {
     transform: scale(1.4);
   }
-  .tx-dlf-calendar .calendar-view .month table tr td.open h4:after,
-  .tx-dlf-calendar .calendar-view .month table tr td.open .day-label:after {
+  .tx-dlf-calendar .calendar-view .month table tr td.open h4:after {
     top: 26px;
     opacity: 1;
     transform: translateY(0);
