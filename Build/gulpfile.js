@@ -46,7 +46,7 @@ function setProduction (done) {
 
 function scss (done) {
   del([
-    paths.scss.dest + '*.*'
+    paths.scss.dest + 'main.css'
   ], {
     force: true
   })
@@ -67,7 +67,7 @@ function scss (done) {
 
 function lessrun (done) {
   del([
-    paths.less.dest + '*.*'
+    paths.less.dest + 'Digitalcollections.css'
   ], {
     force: true
   })
