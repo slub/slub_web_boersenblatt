@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 	<f:if condition="{menu}">
-		<div class="content-element">
+		<div class="content-element" id="c{data.uid}">
 			<div class="infos">
 				<f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout, position: data.header_position}" />
 			</div>
