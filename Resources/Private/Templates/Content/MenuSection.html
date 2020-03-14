@@ -2,7 +2,9 @@
 
 	<f:if condition="{menu}">
 		<div class="content-element">
-			<f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout, position: data.header_position}" />
+			<div class="infos">
+				<f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout, position: data.header_position}" />
+			</div>
 			<ul>
 				<f:for each="{menu}" as="page">
 					<li>

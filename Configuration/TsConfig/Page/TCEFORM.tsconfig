@@ -27,7 +27,7 @@ TCEFORM {
             div,
             form_formframework,
 #            header,
-            html,
+#            html,
 #            image,
 #            list,
             login,
