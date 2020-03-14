@@ -54,6 +54,8 @@ TCEFORM {
     header_layout {
       disabled = 0
       removeItems = 3,4,5,6
+      altLabels.1 = H1 - Überschrift
+      altLabels.2 = H2 - Überschrift
     }
 
     header_position {

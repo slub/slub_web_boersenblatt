@@ -8,11 +8,10 @@ imports:
   # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
   config:
-    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:slub_web_boersenblatt/Resources/Public/Styles/rte.css"]
-    width: "520px"
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:slub_web_boersenblatt/Resources/Public/Styles/main.css"]
     resize_enabled: true
     resize_dir: 'both'
-    resize_maxWidth: 1000
+    resize_maxWidth: 1280
     resize_minWidth: 400
     uiColor: "#F8F8F8"
 

@@ -166,6 +166,37 @@ article {
 }
 
 /* ##################################################### */
+/* ########### Content Element like menu_section or html */
+/* ##################################################### */
+
+.content-element {
+	background-color: $color4;
+	margin: 0 0 4em;
+	.infos {
+		text-align: left;
+		padding: 3em;
+		h2 {
+			padding: 0;
+			color: $color1;
+		}
+	}
+	ul {
+		list-style-type: none;
+		ul {
+			list-style-type: disc;
+		}
+		li {
+			text-align: left;
+		}
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/* ##################################################### */
 /* ############## MEDIEN ############################### */
 /* ##################################################### */
 
@@ -203,7 +234,7 @@ figure {
 		.logo {
 			display: none;
 			margin-bottom: 0;
-			padding: 2em 2em 0;	
+			padding: 2em 2em 0;
       		a {
       			border: none;
       			text-decoration: none;
@@ -213,8 +244,8 @@ figure {
 	}
 }
 
-.banner {position: relative; z-index: -1; 
-	&.scrollfade {transition: opacity 1.5s; opacity: 1; 
+.banner {position: relative; z-index: -1;
+	&.scrollfade {transition: opacity 1.5s; opacity: 1;
 		&.scrolled {opacity: .1}
 	}
 	&.nofade {opacity: .1;
@@ -353,7 +384,7 @@ figure {
 	letter-spacing: 1px;
 	h2 {padding: 1em 0; letter-spacing: 0}
 	.tx-dlf-search-numHits, .tx-dlf-listview-counts {opacity: .7; margin: 0;line-height: 1.5;}
-	
+
 	/* Dropdowns, noch klären ob notwendig */
 	> form {display: none}
 
