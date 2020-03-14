@@ -23,7 +23,9 @@
                 </div>
             </f:if>
 
-            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+            <div class="inner">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+            </div>
 
             <footer>
                 <p>© <f:format.date format="Y">now</f:format.date> Börsenblatt für den deutschen Buchhandel - Digital</p>

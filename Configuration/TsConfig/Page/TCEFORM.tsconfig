@@ -74,14 +74,14 @@ TCEFORM {
 
     layout {
       disabled = 1
-      removeItems = 1,2,3
-      altLabels.1 =
-      addItems.inner = Main Content Element
+#      removeItems = 1,2,3
+#      altLabels.1 =
+#      addItems.inner = Main Content Element
     }
 
     frame_class {
       disabled = 1
-      removeItems (
+#      removeItems (
 #          default,
 #          ruler-before,
 #          ruler-after,
@@ -89,7 +89,8 @@ TCEFORM {
 #          indent-left,
 #          indent-right,
 #          none
-      )
+#      )
+#      addItems.inner = Main Content Element
     }
 
     space_before_class {
