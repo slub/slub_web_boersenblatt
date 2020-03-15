@@ -10,7 +10,7 @@
  */
 
 // The paths to external Resources
-@header-logo: '@{basepath}Resources/Public/Images/Slub/Slublogo.svg';
+@header-logo: '/typo3conf/ext/slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_0c_weiss_ab.svg';
 @control-icons: '@{basepath}Resources/Public/Images/Slub/viewerControlIcons.svg';
 
 // Colors
@@ -77,9 +77,41 @@
 
 // Dedicated restyling
 .control-bar {
-    .header-bar .brand a {
-        line-height: 24px;
+    .header-bar .brand {
+        width: 100%;
+        top: 5px;
+        a {
+            &:before {
+                content: '';
+            }
+            background-size: auto 38px;
+            background-position: 0 0;
+            line-height: 24px;
+            padding-top: 70px;
+        }
     }
+    @media screen and (min-width: @desktopViewportWidth) {
+        width: 25%;
+        .header-bar {
+            .brand {
+                top: 5px;
+                left: 20px;
+                height: 40px;
+                a {
+                    font-size: 11px;
+                    line-height: 1px;
+                    background-size: auto 40px;
+                }
+            }
+        }
+        .metadata-wrapper, .toc-wrapper {
+            padding: 20px 5px;
+        }
+        .metadata-wrapper {
+            padding-bottom: 40px;
+        }
+    }
+
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
         &:before {
             position: absolute;

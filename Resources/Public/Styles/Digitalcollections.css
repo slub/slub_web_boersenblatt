@@ -488,7 +488,7 @@ a {
   font-size: 14px;
   line-height: 28px;
   text-align: left;
-  background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/Slublogo.svg') no-repeat left center;
+  background: url('/typo3conf/ext/slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_0c_weiss_ab.svg') no-repeat left center;
   background-size: auto 100%;
   display: block;
   padding-left: 80px;
@@ -3077,8 +3077,40 @@ body.calendar .tx-dlf-toolsFulltextsearch form {
   font-weight: 600;
   font-style: normal;
 }
+.control-bar .header-bar .brand {
+  width: 100%;
+  top: 5px;
+}
 .control-bar .header-bar .brand a {
+  background-size: auto 38px;
+  background-position: 0 0;
   line-height: 24px;
+  padding-top: 70px;
+}
+.control-bar .header-bar .brand a:before {
+  content: '';
+}
+@media screen and (min-width: 1200px) {
+  .control-bar {
+    width: 25%;
+  }
+  .control-bar .header-bar .brand {
+    top: 5px;
+    left: 20px;
+    height: 40px;
+  }
+  .control-bar .header-bar .brand a {
+    font-size: 11px;
+    line-height: 1px;
+    background-size: auto 40px;
+  }
+  .control-bar .metadata-wrapper,
+  .control-bar .toc-wrapper {
+    padding: 20px 5px;
+  }
+  .control-bar .metadata-wrapper {
+    padding-bottom: 40px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .control-bar:before {
