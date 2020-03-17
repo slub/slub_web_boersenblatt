@@ -92,7 +92,7 @@ TCEFORM {
               indent-right,
 #             none
           )
-          addItems.banner-content = Banner Content Wrap
+          addItems.bannercontent = Banner Content Wrap
         }
       }
 
