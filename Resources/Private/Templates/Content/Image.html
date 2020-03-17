@@ -8,8 +8,8 @@
         <f:for each="{files}" as="image">
             <li>
                 <figure>
-                    <a href="{f:uri.image(image: image)}" data-rel="lightcase:Galerie">
-                        <f:image image="{image}" width="400" height="533c"/>
+                    <a href="{f:uri.image(image: image)}" data-rel="lightcase:Galerie" title="{image.properties.title}">
+                        <img src="{f:uri.image(image: image, width: 400, height: '533c')}" />
                     </a>
                 </figure>
             </li>
