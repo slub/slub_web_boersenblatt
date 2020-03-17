@@ -106,7 +106,7 @@ footer {
 	background-color: $color4;
 	color: $color6;
 	padding: 8em 2em;
-	margin-top: auto;
+	margin-top: 6em;
 	border-top: 1px solid $color7;
 	font-family: $heading-font-family;
 	font-weight: 400;
@@ -142,18 +142,7 @@ footer {
 }
 
 
-/* ##################################################### */
-/* ############## STICKY FOOTER ######################## */
-/* ##################################################### */
 
-
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vH;
-
-
-}
 
 /* ##################################################### */
 /* ############## TEXT/MEDIEN ########################## */
