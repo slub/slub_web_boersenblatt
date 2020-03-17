@@ -22,7 +22,7 @@ $link-hover-color: $color10;
 $link-visited-color: $color1;
 $base-font-family: 'Martel', serif;
 $base-font-weight: 500;
-$heading-font-family: 'Fira Sans Condensed', sans-serif; 
+$heading-font-family: 'Fira Sans Condensed', sans-serif;
 $heading-font-weight: 500;
 
  /* Reset/Normalize https://github.com/csstools/sanitize.css/ */
@@ -58,5 +58,5 @@ $heading-font-weight: 500;
  /* Cross-Browser Styling */
 @import "browser";
 
- /* Custim Styling Davitec */
+ /* Custom Styling Davitec */
 @import "custom";

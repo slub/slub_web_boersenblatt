@@ -4,8 +4,8 @@
 <article id="c{data.uid}">
     <f:if condition="{files.0}">
         <figure>
-            <a href="{f:uri.image(image: files.0)}" data-rel="lightcase:Galerie">
-                <f:image image="{files.0}" width="400"/>
+            <a href="{f:uri.image(image: files.0)}" data-rel="lightcase:Galerie" title="{files.0.properties.title}">
+                <img src="{f:uri.image(image: files.0, maxWidth: 400)}" />
             </a>
         </figure>
     </f:if>
