@@ -76,23 +76,26 @@ TCEFORM {
 
     layout {
       disabled = 1
-#      removeItems = 1,2,3
-#      altLabels.1 =
-#      addItems.inner = Main Content Element
     }
 
     frame_class {
       disabled = 1
-#      removeItems (
-#          default,
-#          ruler-before,
-#          ruler-after,
-#          indent,
-#          indent-left,
-#          indent-right,
-#          none
-#      )
-#      addItems.inner = Main Content Element
+      types {
+        list {
+          disabled = 0
+          removeItems (
+#             default,
+              ruler-before,
+              ruler-after,
+              indent,
+              indent-left,
+              indent-right,
+#             none
+          )
+          addItems.bannercontent = Banner Content Wrap
+        }
+      }
+
     }
 
     space_before_class {
