@@ -10,7 +10,7 @@
  */
 
 // The paths to external Resources
-@header-logo: '/typo3conf/ext/slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_0c_weiss_ab.svg';
+@header-logo: '/typo3conf/ext/slub_web_boersenblatt/Resources/Public/Images/Logo_Erscheinungsverlauf.svg';
 @control-icons: '@{basepath}Resources/Public/Images/Slub/viewerControlIcons.svg';
 
 // Colors
@@ -79,12 +79,12 @@
 .control-bar {
     .header-bar .brand {
         width: 100%;
-        top: 5px;
+        top: 0px;
         a {
             &:before {
                 content: '';
             }
-            background-size: auto 38px;
+            background-size: auto 50px;
             background-position: 0 0;
             line-height: 24px;
             padding-top: 70px;
@@ -94,13 +94,13 @@
         width: 25%;
         .header-bar {
             .brand {
-                top: 5px;
-                left: 20px;
-                height: 40px;
+                top: -5px;
+                left: 0px;
+                height: 60px;
                 a {
                     font-size: 11px;
                     line-height: 1px;
-                    background-size: auto 40px;
+                    background-size: auto 60px;
                 }
             }
         }
@@ -124,12 +124,22 @@
             content: " ";
             pointer-events: none;
         }
-        .header-bar nav {
-            .nav-toggle {
-                right: 0;
+        .header-bar {
+            .brand {
+                top: -5px;
+                left: 0px;
+                height: 60px;
+                a {
+                    background-size: auto 50px;
+                }
             }
-            .language-nav {
-                right: 24px;
+            nav {
+                .nav-toggle {
+                    right: 0;
+                }
+                .language-nav {
+                    right: 24px;
+                }
             }
         }
     }
@@ -166,5 +176,9 @@
             }
         }
     }
+}
+
+.tx-dlf-calendar .year-anchor {
+    padding: 0 0 10px 60px;
 }
 // EOF
