@@ -3,6 +3,9 @@
 <f:if condition="{data.frame_class} == bannercontent">
     <f:then>
         <div class="bannercontent">
+            <div class="logo">
+                <a href="#" title="zur Startseite"><f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/></a>
+            </div>
             <f:cObject typoscriptObjectPath="tt_content.list.20.{data.list_type}" data="{data}" table="tt_content"/>
         </div>
     </f:then>
