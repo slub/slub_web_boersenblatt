@@ -4,9 +4,19 @@
 <article id="c{data.uid}">
     <f:if condition="{files.0}">
         <figure>
-            <a href="{f:uri.image(image: files.0)}" data-rel="lightcase:Galerie" title="{files.0.properties.title}">
-                <img src="{f:uri.image(image: files.0, maxWidth: 400)}" />
-            </a>
+            <f:if condition="{data.image_zoom}">
+                <f:then>
+                    <a href="{f:uri.image(image: files.0, maxHeight: 800)}" data-rel="lightcase:Galerie" title="{files.0.properties.title}">
+                        <img src="{f:uri.image(image: files.0, maxWidth: 400)}" />
+                    </a>
+                </f:then>
+                <f:else>
+                    <f:link.typolink parameter="{files.0.link}">
+                        <img src="{f:uri.image(image: files.0, maxWidth: 400)}" />
+                    </f:link.typolink>
+                </f:else>
+            </f:if>
+
         </figure>
     </f:if>
 

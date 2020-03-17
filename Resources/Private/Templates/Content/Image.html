@@ -8,9 +8,18 @@
         <f:for each="{files}" as="image">
             <li>
                 <figure>
-                    <a href="{f:uri.image(image: image)}" data-rel="lightcase:Galerie" title="{image.properties.title}">
-                        <img src="{f:uri.image(image: image, width: 400, height: '533c')}" />
-                    </a>
+                    <f:if condition="{data.image_zoom}">
+                        <f:then>
+                            <a href="{f:uri.image(image: image, maxHeight: 800)}" data-rel="lightcase:Galerie" title="{image.properties.title}">
+                                <img src="{f:uri.image(image: image, width: 400, height: '533c')}"/>
+                            </a>
+                        </f:then>
+                        <f:else>
+                            <f:link.typolink parameter="{image.link}">
+                                <img src="{f:uri.image(image: image, maxWidth: 400)}"/>
+                            </f:link.typolink>
+                        </f:else>
+                    </f:if>
                 </figure>
             </li>
         </f:for>
