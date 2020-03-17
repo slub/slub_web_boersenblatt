@@ -142,6 +142,43 @@ input[type="radio"]:checked + label::before {
       flex-wrap: wrap;
       label[for="tx-dlf-search-query"] {display: none;}
 
+      /* ############################################# */
+      /* ###### Autocomplete 09.03.2020 ############## */
+      /* ############################################# */
+
+      #tx-dlf-search-suggest {
+        position: absolute;
+        width: 100%;
+        top: 4.1em;
+        right: 0;
+        padding: 0 3em;
+        .ui-autocomplete {
+          display: block !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          z-index: 100;
+          list-style: none;
+          margin: 0; 
+          padding: 0;
+          text-align: left;
+          li {
+            background: $color4;
+            border-top: 2px solid $color7;
+            div {
+              font-family: $heading-font-family;
+              letter-spacing: .7px;
+              font-weight: 400;
+              color: $color5;
+              padding: .5em 1.5em;
+            }
+            &:hover {
+              background: #f8f8f8;
+            }
+          }
+        }
+      }
+
       label[for="tx-dlf-search-fulltext-no"], label[for="tx-dlf-search-fulltext-yes"]{color: $color5}
       input#tx-dlf-search-query {
         width: auto;
@@ -161,6 +198,231 @@ input[type="radio"]:checked + label::before {
           padding: 0 0 0 .2em;;
         }
       }
+    }
+  }
+}
+
+
+
+/* ##################################################### */
+/* ############# Autocomplete 09.03.2020 ############### */
+/* ##################################################### */
+
+.ui-helper-hidden-accessible {display: none !important}
+
+
+/* ##################################################### */
+/* ############# Suchergebnisse 17.03.2020 ############# */
+/* ##################################################### */
+
+.ergebnisse {margin-top: 6em}
+
+
+
+/* ##################################################### */
+/* ############## SUCHERGEBNISSE ####################### */
+/* ##################################################### */
+
+.tx-dlf-listview {
+
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  letter-spacing: 1px;
+  h2 {padding: 1em 0; letter-spacing: 0; display: none;}
+  .tx-dlf-search-numHits {margin: 0;line-height: 1.5; color: $color13}
+  .tx-dlf-listview-counts {display: none;}
+  /* Dropdowns, noch klären ob notwendig */
+  > form {
+      div {
+        label {color: $color13}
+        label[for="ListView-5e66351ec4bb0"] {display: none}
+        select {
+          display: inline-block;
+          padding: 1em 2em 1em 1em;
+          margin: 1em 2em 0 .5em;
+          border: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          background-color: $color4;
+          background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e3000b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),;
+          background-repeat: no-repeat, repeat;
+          background-position: right .7em top 50%, 0 0;
+          background-size: .65em auto, 100%;
+          cursor: pointer;
+        }
+      }
+    }
+
+  ol {list-style: none; margin: 0; padding: 0;
+    .tx-dlf-listview-list {
+      img {border: 1em solid $color4;}
+    }
+    li {margin: 5em 0}
+    dl {
+      dd.tx-dlf-metadata-title {display: block; font-size: 1.2em; line-height: 1.2;}
+      dd.tx-dlf-metadata-type, dt.tx-dlf-metadata-type, dt.tx-dlf-metadata-title {display: none}
+      .tx-dlf-metadata-year {font-size: 1.1em; color: $color3}
+    }
+    ol {
+      li {position: relative; margin: 0;
+        .imgtoggle {display: block; position: absolute; right: 1em; top: 0; color: $color7; text-align: center; border: none; text-decoration: none; cursor: pointer; padding: .2em 1.5em;
+          &:hover {color: $color6;}
+          &.open {
+            &:after {content: '-';}
+          }
+          &:after {content: '+'; font-size: 2.5em; font-weight: 400; line-height: .8 }
+        }
+        .listlink {padding: .5em 4em .5em 1em; margin: .5em 2em; background-color:$color4; display: flex; text-align: left; font-size: .8em; cursor: pointer; color: $color3; border: none; flex-wrap: wrap;
+          &:hover {background: #f8f8f8;}
+        }
+        dl {padding: 0; font-weight: 600; padding-right: 1em;white-space: nowrap; min-width: 70px; width: 10%;
+          dd.tx-dlf-metadata-title {display: none;}
+        }
+        .tx-dlf-listview-preview {white-space: nowrap;overflow: hidden; text-overflow: ellipsis; flex-grow: 1; width: 70%;
+          em {color: $color1; font-style: normal;}
+        }
+        .tx-dlf-listview-thumbnail {order: 2; display: none; width: 100%;
+          img {margin: 1em auto; display: block}
+        }
+        dt.tx-dlf-metadata-type {display: none;}
+        dd.tx-dlf-metadata-type {font-size: 1em; color: $color3; display: block; padding: 0}
+        dt.tx-dlf-metadata-title {display: none;}
+      }
+    }
+  }
+}
+
+
+
+/* ##################################################### */
+/* ######### SUCHERGEBNISSE ALTES MARKUP ############### */
+/* ##################################################### */
+
+.tx-dlf-abstracts {
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  > li {
+    background-color: $color4;
+    margin: 1em 0;
+    position: relative;
+    .value {
+      color: $color4;
+      display: block;
+      top: 0;
+      left: 0;
+      padding: 0.5em;
+      position: absolute;
+      background-color: $color7;
+      font-weight: 600;
+      line-height: 1;
+      margin: 0;
+      font-size: 1.4em;
+    }
+  }
+}
+
+.tx-dlf-morevolumes {
+  font: 0/0 Arial, sans-serif;
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear 0s;
+  &:hover:after {
+    background-color: $color6;
+  }
+  &:after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    color: $color4;
+    font-weight: 600;
+    font-size: 30px;
+    bottom: 0px;
+    padding: 0.3em 0.5em;
+    background-color: $color7;
+    height: 50px;
+    line-height: 1.1;
+  }
+  &.open {
+    &:after {
+      content: "-";
+      padding: 0.3em 0.63em;
+    }
+  }
+}
+.tx-dlf-hidevolumes {
+  display: none;
+}
+.tx-dlf-volume {
+  background-color: $color11;
+  margin: 0;
+  padding: 0.5em 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    background-color: $color4;
+    margin: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 22%;
+    text-overflow: ellipsis;
+    dd.tx-dlf-title {
+      font-size: 0.9em;
+      padding: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+dl {
+  padding: 1em;
+}
+dt.tx-dlf-title,
+dt.tx-dlf-type {
+  display: none;
+}
+dd.tx-dlf-title {
+  font-size: 1.2em;
+  display: block;
+  padding: 0 1em 0.5em;
+}
+dd,
+dt {
+  margin: 0;
+  padding: 0 0.2em;
+  display: inline;
+  color: $color5;
+  font-size: 0.8em;
+}
+
+.imgsearch {
+  figure {
+    background-color: $color4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    figcaption {
+      position: absolute;
+      left: 0;
+      top: 3em;
+      display: inline-block;
+      background-color: $color1;
+      color: $color4;
+      padding: 0.7em 1em;
+      font-weight: 600;
+      font-size: 1.1em;
     }
   }
 }

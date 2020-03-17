@@ -5,7 +5,7 @@
     <nav class="main">
         <ul>
             <f:for each="{menuMain}" as="mainItem">
-                <li>
+                <li {f:if(condition: mainItem.active, then: 'class="active"')}>
                     <a href="{mainItem.link}" title="{mainItem.title}">{mainItem.title}</a>
                 </li>
             </f:for>

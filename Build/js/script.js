@@ -85,7 +85,8 @@ $(document).ready(function() {
     /* ##################################################### */
 
     $('a[data-rel^=lightcase]').lightcase({
-        showTitle: false,
+        showTitle: true,
+        showCaption: false,
         maxWidth: 1200,
         maxHeight: 800
     });
@@ -157,7 +158,7 @@ $(document).ready(function() {
     window.setInterval(swapImages, waiting_time);
 
     function swapImages() {
-        
+
         var $currentImg = $('.background:visible');
         var $nextImg = $('.background:hidden').eq(Math.floor(Math.random() * $('.background:hidden').length));
 

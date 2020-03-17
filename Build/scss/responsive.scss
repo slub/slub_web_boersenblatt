@@ -27,8 +27,8 @@ img {max-width: 100%; height: auto}
 	body {margin-left: 0;}
 	aside {left: -300px;
 		.footer {
-			ul {display: block;
-				li {
+			ul {display: block; margin-bottom: 2em;
+				li {margin: 0 0 1em;
 					a, strong {}
 				}
 			}
@@ -99,7 +99,7 @@ img {max-width: 100%; height: auto}
 
 @media only screen and (max-width : 568px) {
 
-	html {font-size: 85%}
+	html {}
 
 	.home .bannercontent {padding: 2em 0}
 
@@ -146,7 +146,7 @@ img {max-width: 100%; height: auto}
 
 @media only screen and (max-width : 320px) {
 
-	html {font-size: 80%}
+	html {font-size: 90%}
 
 	.tx-dlf-search {
 	  form {
