@@ -968,6 +968,23 @@ article figure img { max-height: 400px; }
 article:after { content: ""; display: table; clear: both; }
 
 /* ##################################################### */
+/* ########### Content Element like menu_section or html */
+/* ##################################################### */
+.content-element { background-color: #ffffff; margin: 0 0 4em; }
+
+.content-element .infos { text-align: left; padding: 3em; }
+
+.content-element .infos h2 { padding: 0; color: #e3000b; }
+
+.content-element ul { list-style-type: none; }
+
+.content-element ul ul { list-style-type: disc; }
+
+.content-element ul li { text-align: left; }
+
+.content-element:after { content: ""; display: table; clear: both; }
+
+/* ##################################################### */
 /* ############## MEDIEN ############################### */
 /* ##################################################### */
 figure { margin: 0; }

@@ -2025,6 +2025,10 @@ $(document).ready(function() {
         $(this).toggleClass("open");
     });
 
+    $( ".pageresult" ).wrapInner(function() {
+        return "<a href='" + $(this).find(".tx-dlf-metadata-title a").attr("href") + "'></a>";
+    });
+
     /* ##################################################### */
     /* ############## MOBILE MENU ########################## */
     /* ##################################################### */

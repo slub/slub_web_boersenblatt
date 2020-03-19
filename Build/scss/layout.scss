@@ -175,6 +175,37 @@ article {
 }
 
 /* ##################################################### */
+/* ########### Content Element like menu_section or html */
+/* ##################################################### */
+
+.content-element {
+	background-color: $color4;
+	margin: 0 0 4em;
+	.infos {
+		text-align: left;
+		padding: 3em;
+		h2 {
+			padding: 0;
+			color: $color1;
+		}
+	}
+	ul {
+		list-style-type: none;
+		ul {
+			list-style-type: disc;
+		}
+		li {
+			text-align: left;
+		}
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/* ##################################################### */
 /* ############## MEDIEN ############################### */
 /* ##################################################### */
 
@@ -212,7 +243,7 @@ figure {
 		.logo {
 			display: none;
 			margin-bottom: 0;
-			padding: 2em 2em 0;	
+			padding: 2em 2em 0;
       		a {
       			border: none;
       			text-decoration: none;
@@ -222,8 +253,8 @@ figure {
 	}
 }
 
-.banner {position: relative; z-index: -1; 
-	&.scrollfade {transition: opacity 1.5s; opacity: 1; 
+.banner {position: relative; z-index: -1;
+	&.scrollfade {transition: opacity 1.5s; opacity: 1;
 		&.scrolled {opacity: .1}
 	}
 	&.nofade {opacity: .1;
@@ -313,7 +344,7 @@ figure {
 	padding: 1em;
     margin: 1em 2em;
     background-color:rgba(247, 240, 227,.8);
-    box-shadow: 0 0 30px 0 rgba(0,0,0,.05); 
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.05);
 
 	.tx-dlf-pagebrowser, .tx-dlf-listview-pagebrowser {
 		display: flex;
