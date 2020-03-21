@@ -25,7 +25,12 @@
             </f:if>
 
             <div class="home">
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}"/>
+                <div class="bannercontent">
+                    <div class="logo">
+                        <a href="#" title="zur Startseite"><f:image src="EXT:slub_web_boersenblatt/Resources/Public/Images/Logo_Boersenblatt_digital_4c.svg" alt="Logo Börsenblatt digital"/></a>
+                    </div>
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}"/>
+                </div>
                 <div class="arrow bounce">
                     <a href="#feature"><span class="icon-arrow-down"></span></a>
                 </div>
