@@ -127,7 +127,7 @@ input[type="radio"]:checked + label::before {
 /* ##################################################### */
 
 .tx-dlf-search {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto auto 2em;
   position: relative;
   width: 100%;
@@ -159,7 +159,7 @@ input[type="radio"]:checked + label::before {
           width: 100% !important;
           z-index: 100;
           list-style: none;
-          margin: 0; 
+          margin: 0;
           padding: 0;
           text-align: left;
           li {
@@ -225,18 +225,18 @@ input[type="radio"]:checked + label::before {
 
 .tx-dlf-listview {
 
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: $heading-font-family;
   font-weight: 400;
   letter-spacing: 1px;
   h2 {padding: 1em 0; letter-spacing: 0; display: none;}
-  .tx-dlf-search-numHits {margin: 0;line-height: 1.5; color: $color13}
+  .tx-dlf-search-numHits {margin: 0;line-height: 1.5; color: $color5}
   .tx-dlf-listview-counts {display: none;}
   /* Dropdowns, noch klären ob notwendig */
   > form {
       div {
-        label {color: $color13}
+        label {color: $color5}
         label[for="ListView-5e66351ec4bb0"] {display: none}
         select {
           display: inline-block;
@@ -252,32 +252,40 @@ input[type="radio"]:checked + label::before {
           background-position: right .7em top 50%, 0 0;
           background-size: .65em auto, 100%;
           cursor: pointer;
+          &:first-of-type {margin-right:0;}
         }
       }
     }
+}
 
-  ol {list-style: none; margin: 0; padding: 0;
-    .tx-dlf-listview-list {
-      img {border: 1em solid $color4;}
-    }
-    li {margin: 5em 0}
+ol.tx-dlf-listview-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  img {border: 1em solid $color4;}
+
+  li {margin: 5em 0}
     dl {
       dd.tx-dlf-metadata-title {display: block; font-size: 1.2em; line-height: 1.2;}
       dd.tx-dlf-metadata-type, dt.tx-dlf-metadata-type, dt.tx-dlf-metadata-title {display: none}
-      .tx-dlf-metadata-year {font-size: 1.1em; color: $color3}
+      .tx-dlf-metadata-year {font-size: 1.1em; color: $color5}
     }
-    ol {
-      li {position: relative; margin: 0;
-        .imgtoggle {display: block; position: absolute; right: 1em; top: 0; color: $color7; text-align: center; border: none; text-decoration: none; cursor: pointer; padding: .2em 1.5em;
-          &:hover {color: $color6;}
-          &.open {
-            &:after {content: '-';}
-          }
-          &:after {content: '+'; font-size: 2.5em; font-weight: 400; line-height: .8 }
+    ol {padding: 0;
+      a {
+        &:hover li {background: #f8f8f8;}
+      }
+      li {list-style: none; margin: .5em 4em .5em 2em;position: relative;
+        .imgtoggler {display: block; position: absolute; right: -3.5em; top: 0; color: $color5; text-align: center; border: none; text-decoration: none; cursor: pointer; padding: .2em 1.5em;background-color:transparent; font-size: .9em;
+                &:hover {color: $color6;}
+                &.open {
+                    &:after {content: '-';}
+                }
+                &:after {content: '+'; font-size: 2.5em; font-weight: 400; line-height: .8 }
         }
-        .listlink {padding: .5em 4em .5em 1em; margin: .5em 2em; background-color:$color4; display: flex; text-align: left; font-size: .8em; cursor: pointer; color: $color3; border: none; flex-wrap: wrap;
-          &:hover {background: #f8f8f8;}
+        a {display: flex; text-align: left; font-size: .8em; color: $color3; border: none; flex-wrap: wrap; background-color:$color4; padding: .5em 1em;
+            &:hover {background-color:$color7;}
         }
+
         dl {padding: 0; font-weight: 600; padding-right: 1em;white-space: nowrap; min-width: 70px; width: 10%;
           dd.tx-dlf-metadata-title {display: none;}
         }
@@ -293,7 +301,7 @@ input[type="radio"]:checked + label::before {
       }
     }
   }
-}
+
 
 
 

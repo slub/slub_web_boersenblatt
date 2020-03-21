@@ -2025,8 +2025,19 @@ $(document).ready(function() {
         $(this).toggleClass("open");
     });
 
+    var $imgtoggler = $("<div></div>", {class:"imgtoggler"});
+
     $( ".pageresult" ).wrapInner(function() {
         return "<a href='" + $(this).find(".tx-dlf-metadata-title a").attr("href") + "'></a>";
+    });
+
+    $( ".pageresult" ).prepend( $imgtoggler );
+
+    $(".imgtoggler").click(function() {
+        $(this).parent().find('.tx-dlf-listview-thumbnail').slideToggle("slow", function() {
+            // Animation complete.
+        });
+        $(this).toggleClass("open");
     });
 
     /* ##################################################### */

@@ -312,8 +312,8 @@ a {
   width: 40px;
   height: 40px;
   padding-left: 40px;
-  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -561px -80px;
-  background-size: 600px 120px;
+  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -600px -80px;
+  background-size: auto 120px;
   outline: none;
   border-radius: 20px;
   -webkit-appearance: none;
@@ -341,8 +341,8 @@ a {
   position: absolute;
   width: 12px;
   height: 12px;
-  background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -538px -54px;
-  background-size: 600px 120px;
+  background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -576px -54px;
+  background-size: auto 120px;
   display: block;
   content: " ";
   transition: all 0.3s ease-out;
@@ -366,9 +366,6 @@ a {
 }
 .document-view .document-functions .provider .mobile-controls .fullscreen.active:after {
   transform: rotate(0);
-}
-.fullscreen .document-view .document-functions .provider .mobile-controls .fullscreen {
-  top: 5px !important;
 }
 .fullscreen .document-view .document-functions .provider {
   transform: translateY(-100%);
@@ -609,6 +606,7 @@ a {
   background-color: transparent;
   border: 0;
   background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -600px -40px;
+  background-size: auto 120px;
 }
 .control-bar .metadata-wrapper,
 .control-bar .toc-wrapper {
@@ -629,6 +627,7 @@ a {
   width: 30px;
   height: 60px;
   background: rgba(17, 102, 119, 0.97) url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
+  background-size: auto 120px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .control-bar .metadata-wrapper.open,
@@ -1178,6 +1177,12 @@ a {
   .tx-dlf-metadata dl dd + dd {
     display: inline-block;
   }
+  .tx-dlf-metadata dl dd.metadata-collection-entry {
+    background: #e6e6e6;
+    border-radius: 20px;
+    padding: 1px 5px;
+    margin-right: 6px;
+  }
   .tx-dlf-metadata dl dt:before {
     position: relative;
     width: 100%;
@@ -1248,6 +1253,7 @@ a {
   border-radius: 20px;
   margin: 0 5px;
   background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
+  background-size: auto 120px;
 }
 .document-functions > ul > li > span,
 .view-functions > ul > li > span {
@@ -1291,7 +1297,7 @@ a {
   width: 0;
   height: 0;
   margin-left: -10px;
-  border: 10px solid transparent;
+  border: solid transparent;
   border-width: 0 10px;
   border-top-color: rgba(17, 102, 119, 0.97);
   content: " ";
@@ -1321,24 +1327,18 @@ a {
   color: white;
   display: block;
   padding-left: 40px;
-  margin: 10px 0;
-  min-height: 40px;
-  line-height: 40px;
+  margin: 15px 0;
 }
 .document-functions > ul > li.submenu > ul li a:before {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  margin-top: -20px;
   width: 40px;
   height: 40px;
   content: " ";
   background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
-}
-.document-functions > ul > li.submenu > ul li a.download-document:before {
-  background-position: -360px -40px;
-}
-.document-functions > ul > li.submenu > ul li a.download-page:before {
-  background-position: -320px -40px;
+  background-size: auto 120px;
 }
 .document-functions > ul > li.submenu > ul li a.download-fulltext:before {
   background-position: -280px -40px;
@@ -1352,11 +1352,23 @@ a {
 .document-functions > ul > li.submenu > ul li a.local-contact:before {
   background-position: -400px -40px;
 }
+.document-functions > ul > li.submenu > ul li a.download-document:before,
+.document-functions > ul > li.submenu > ul li a[title$="Seite"]:before,
+.document-functions > ul > li.submenu > ul li a[title$="Page"]:before {
+  background-position: -360px -40px;
+}
+.document-functions > ul > li.submenu > ul li a.download-page:before,
+.document-functions > ul > li.submenu > ul li a[title$="ument"]:before {
+  background-position: -320px -40px;
+}
 .document-functions > ul > li.submenu > ul li a.persistence-document:before {
   background-position: -360px -80px;
 }
 .document-functions > ul > li.submenu > ul li a.persistence-page:before {
   background-position: -320px -80px;
+}
+.document-functions > ul > li.submenu > ul li a.terms-of-use:before {
+  background-position: -640px -80px;
 }
 .document-functions > ul > li.submenu.open:before {
   top: -13.5px;
@@ -1400,7 +1412,7 @@ a {
   right: -1px;
   width: 0;
   height: 0;
-  border: 13px solid transparent;
+  border: solid transparent;
   border-width: 9px 0 9px 13px;
   border-left-color: white;
   border-radius: 0;
@@ -1414,7 +1426,7 @@ a {
   height: 0;
   display: block;
   overflow: hidden;
-  border: 8px solid transparent;
+  border: solid transparent;
   border-width: 5px 0 5px 8px;
   border-left-color: #cc0000;
 }
@@ -1498,6 +1510,8 @@ a {
   .document-functions > ul li.submenu > ul li a {
     margin: 0;
     padding-right: 5px;
+    min-height: 40px;
+    line-height: 40px;
   }
   .no-touchevents .document-functions > ul li.submenu > ul li a:hover {
     transform: scale(1);
@@ -1587,6 +1601,7 @@ a {
     border-radius: 20px;
     margin: 0 5px;
     background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -200px 0;
+    background-size: auto 120px;
   }
   .view-functions ul li.tx-dlf-toolsImagemanipulation > span > span > a.active:before {
     position: absolute;
@@ -1634,8 +1649,8 @@ a {
     position: absolute;
     width: 12px;
     height: 12px;
-    background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -538px -54px;
-    background-size: 600px 120px;
+    background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -575px -54px;
+    background-size: auto 120px;
     display: block;
     content: " ";
     transition: all 0.3s ease-out;
@@ -1713,6 +1728,7 @@ a {
   height: 40px;
   content: " ";
   background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
+  background-size: auto 120px;
 }
 .image-manipulation .slider-container .slider:after {
   position: absolute;
@@ -1773,6 +1789,7 @@ a {
   width: 40px;
   height: 40px;
   background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
+  background-size: auto 120px;
   content: " ";
 }
 .image-manipulation .slider-container button.reset-btn {
@@ -1851,6 +1868,7 @@ a {
   height: 40px;
   border-radius: 20px;
   background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
+  background-size: auto 120px;
   content: " ";
 }
 .page-control > div span span {
@@ -2257,12 +2275,15 @@ body.calendar .step-back-button {
   padding: 6px;
 }
 .tx-dlf-calendar .calendar-view table tr th {
-  color: #d9d9d9;
+  font-family: 'Fira Sans Condensed', 'Calibri-Bold', 'Helvetica', Sans-serif;
+  font-size: 14px;
+  color: #737373;
 }
 .tx-dlf-calendar .calendar-view table tr td {
   color: #116677;
 }
-.tx-dlf-calendar .calendar-view table tr td h4 {
+.tx-dlf-calendar .calendar-view table tr td h4,
+.tx-dlf-calendar .calendar-view table tr td .day-label {
   position: relative;
   color: #116677;
   transition: all 0.3s ease-out;
@@ -2270,7 +2291,8 @@ body.calendar .step-back-button {
   display: block;
   border: 1px solid transparent;
 }
-.tx-dlf-calendar .calendar-view table tr td h4:after {
+.tx-dlf-calendar .calendar-view table tr td h4:after,
+.tx-dlf-calendar .calendar-view table tr td .day-label:after {
   position: absolute;
   top: 19px;
   left: 50%;
@@ -2291,7 +2313,7 @@ body.calendar .step-back-button {
   background: #e6f5f7;
   border-radius: 100%;
 }
-.no-touchevents .tx-dlf-calendar .calendar-view table tr td h4 {
+.no-touchevents .tx-dlf-calendar .calendar-view table tr td {
   cursor: pointer;
 }
 .tx-dlf-calendar .calendar-view table tr td ul {
@@ -2314,10 +2336,12 @@ body.calendar .step-back-button {
   padding: 10px;
   color: #fff;
 }
-.tx-dlf-calendar .calendar-view table tr td.open h4 {
+.tx-dlf-calendar .calendar-view table tr td.open h4,
+.tx-dlf-calendar .calendar-view table tr td.open .day-label {
   transform: scale(1.2);
 }
-.tx-dlf-calendar .calendar-view table tr td.open h4:after {
+.tx-dlf-calendar .calendar-view table tr td.open h4:after,
+.tx-dlf-calendar .calendar-view table tr td.open .day-label:after {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2419,7 +2443,8 @@ body.calendar .step-back-button {
   .tx-dlf-calendar .calendar-view .month table tr td {
     position: relative;
   }
-  .tx-dlf-calendar .calendar-view .month table tr td h4 {
+  .tx-dlf-calendar .calendar-view .month table tr td h4,
+  .tx-dlf-calendar .calendar-view .month table tr td .day-label {
     padding: 5px;
   }
   .tx-dlf-calendar .calendar-view .month table tr td ul {
@@ -2428,10 +2453,12 @@ body.calendar .step-back-button {
     padding: 0 10px;
     transform: translateX(-50%);
   }
-  .tx-dlf-calendar .calendar-view .month table tr td.open h4 {
+  .tx-dlf-calendar .calendar-view .month table tr td.open h4,
+  .tx-dlf-calendar .calendar-view .month table tr td.open .day-label {
     transform: scale(1.4);
   }
-  .tx-dlf-calendar .calendar-view .month table tr td.open h4:after {
+  .tx-dlf-calendar .calendar-view .month table tr td.open h4:after,
+  .tx-dlf-calendar .calendar-view .month table tr td.open .day-label:after {
     top: 26px;
     opacity: 1;
     transform: translateY(0);
@@ -2618,13 +2645,15 @@ body.gridview .step-back-button {
 @media screen and (min-width: 1024px) {
   .tx-dlf-pagegrid-pagebrowser {
     height: 70px;
-    width: 600px;
     padding: 15px;
-    margin-left: -300px;
     font-family: 'Fira Sans Condensed', 'Calibri-Bold', 'Helvetica', Sans-serif;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 14px;
+    line-height: 30px;
     color: white;
+    white-space: nowrap;
+    width: auto;
+    margin: 0;
+    transform: translateX(-50%);
     font-feature-settings: "lnum";
     background: rgba(17, 102, 119, 0.9);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -2641,11 +2670,25 @@ body.gridview .step-back-button {
     right: auto;
     background: white;
     border-radius: 20px;
+    width: 30px;
+    height: 30px;
   }
   .tx-dlf-pagegrid-pagebrowser a:before,
   .tx-dlf-pagegrid-pagebrowser a:first-child:before,
   .tx-dlf-pagegrid-pagebrowser a:last-child:before {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tx-dlf-pagegrid-pagebrowser {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .tx-dlf-pagegrid-pagebrowser a,
+  .tx-dlf-pagegrid-pagebrowser a:first-child,
+  .tx-dlf-pagegrid-pagebrowser a:last-child {
+    width: 40px;
+    height: 40px;
   }
 }
 /*
@@ -2664,6 +2707,7 @@ body.gridview .step-back-button {
   bottom: 0;
   background: rgba(255, 255, 255, 0.95);
   text-align: left;
+  transition: all 0.3s ease-out;
 }
 .fulltext-container #tx-dlf-fulltextselection {
   position: relative;
@@ -2688,6 +2732,9 @@ body.gridview .step-back-button {
 }
 .fulltext-visible .fulltext-container #tx-dlf-fulltextselection {
   display: block;
+}
+.fullscreen .fulltext-container {
+  top: 0;
 }
 @media screen and (min-width: 768px) {
   .fulltext-container #tx-dlf-fulltextselection {
@@ -2740,8 +2787,8 @@ body.gridview .step-back-button {
   right: 0;
   width: 40px;
   height: 40px;
-  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -524px 0;
-  background-size: 600px 120px;
+  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -560px 0;
+  background-size: auto 120px;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -2820,8 +2867,8 @@ body.gridview .step-back-button {
   text-shadow: none;
   background-color: transparent;
   border: 0;
-  background: #e6f5f7 url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -522px 0;
-  background-size: 600px 120px;
+  background: #e6f5f7 url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -560px 0;
+  background-size: auto 120px;
   border-radius: 20px;
 }
 .search-indocument-active .tx-dlf-toolsFulltextsearch form {
