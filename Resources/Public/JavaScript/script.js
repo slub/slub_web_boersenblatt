@@ -2033,6 +2033,13 @@ $(document).ready(function() {
 
     $( ".pageresult" ).prepend( $imgtoggler );
 
+    $(".imgtoggler").click(function() {
+        $(this).parent().find('.tx-dlf-listview-thumbnail').slideToggle("slow", function() {
+            // Animation complete.
+        });
+        $(this).toggleClass("open");
+    });
+
     /* ##################################################### */
     /* ############## MOBILE MENU ########################## */
     /* ##################################################### */
