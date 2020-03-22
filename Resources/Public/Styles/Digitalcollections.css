@@ -3138,9 +3138,6 @@ body.calendar .tx-dlf-toolsFulltextsearch form {
   content: '';
 }
 @media screen and (min-width: 1200px) {
-  .control-bar {
-    width: 25%;
-  }
   .control-bar .header-bar .brand {
     top: -5px;
     left: 0px;
