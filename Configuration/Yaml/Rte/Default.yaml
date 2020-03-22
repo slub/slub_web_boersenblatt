@@ -8,7 +8,7 @@ imports:
   # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
   config:
-    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:slub_web_boersenblatt/Resources/Public/Styles/main.css"]
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css"]
     resize_enabled: true
     resize_dir: 'both'
     resize_maxWidth: 1280
