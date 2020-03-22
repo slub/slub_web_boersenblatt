@@ -410,23 +410,25 @@ input[type="radio"]:checked + label::before { background: #e3000b; }
 /* ##################################################### */
 /* ############## SUCHERGEBNISSE ####################### */
 /* ##################################################### */
-.tx-dlf-listview { max-width: 1000px; margin: 0 auto; font-family: "Fira Sans Condensed", sans-serif; font-weight: 400; letter-spacing: 1px; /* Dropdowns, noch klären ob notwendig */ }
+.tx-dlf-listview { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; font-family: "Fira Sans Condensed", sans-serif; font-weight: 400; letter-spacing: 1px; /* Dropdowns, noch klären ob notwendig */ }
 
 .tx-dlf-listview h2 { padding: 1em 0; letter-spacing: 0; display: none; }
 
-.tx-dlf-listview .tx-dlf-search-numHits { margin: 0; line-height: 1.5; color: #505050; }
+.tx-dlf-listview .tx-dlf-search-numHits { margin: 0; line-height: 1.5; color: #505050; width: 50%; padding-top: 1.5em; }
 
 .tx-dlf-listview .tx-dlf-listview-counts { display: none; }
 
+.tx-dlf-listview > form { width: 50%; }
+
 .tx-dlf-listview > form div label { color: #505050; }
 
-.tx-dlf-listview > form div label[for="ListView-5e66351ec4bb0"] { display: none; }
+.tx-dlf-listview > form div label:last-of-type { display: none; }
 
 .tx-dlf-listview > form div select { display: inline-block; padding: 1em 2em 1em 1em; margin: 1em 2em 0 .5em; border: none; -moz-appearance: none; -webkit-appearance: none; appearance: none; background-color: #ffffff; background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e3000b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); background-repeat: no-repeat, repeat; background-position: right .7em top 50%, 0 0; background-size: .65em auto, 100%; cursor: pointer; }
 
 .tx-dlf-listview > form div select:first-of-type { margin-right: 0; }
 
-ol.tx-dlf-listview-list { list-style: none; margin: 0; padding: 0; }
+ol.tx-dlf-listview-list { width: 100%; list-style: none; margin: 0; padding: 0; }
 
 ol.tx-dlf-listview-list img { border: 1em solid #ffffff; }
 
@@ -1014,15 +1016,17 @@ figure.full video { width: 100%; }
 
 .home .bannercontent .logo a img { margin: 2em 0; max-width: 200px; }
 
+.recherche main .logo { display: none; }
+
+.nofadebg { position: relative; z-index: -1; opacity: .1; }
+
+.nofadebg img { display: block; position: fixed; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; -o-object-fit: cover; object-fit: cover; -o-object-position: center left; object-position: center left; height: 100vh; /* Fallback for browsers that do not support Custom Properties */ height: calc(var(--vh, 1vh) * 100); }
+
 .banner { position: relative; z-index: -1; }
 
 .banner.scrollfade { transition: opacity 1.5s; opacity: 1; }
 
 .banner.scrollfade.scrolled { opacity: .1; }
-
-.banner.nofade { opacity: .1; }
-
-.banner.nofade img { display: block !important; }
 
 .banner img.background { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; -o-object-fit: cover; object-fit: cover; -o-object-position: center left; object-position: center left; display: none; height: 100vh; /* Fallback for browsers that do not support Custom Properties */ height: calc(var(--vh, 1vh) * 100); }
 
@@ -1052,7 +1056,7 @@ figure.full video { width: 100%; }
 /* ##################################################### */
 .tx-dlf-sortinfo { opacity: 0.8; margin-top: 2em; font-family: "Fira Sans Condensed", sans-serif; font-weight: 400; letter-spacing: 1px; }
 
-.pagination { padding: 1em; /*margin: 1em 2em; background-color:rgba(247, 240, 227,.8); box-shadow: 0 0 30px 0 rgba(0,0,0,.05); */ }
+.pagination { width: 100%; padding: 1em; }
 
 .pagination .tx-dlf-pagebrowser, .pagination .tx-dlf-listview-pagebrowser { display: flex; flex-wrap: wrap; justify-content: center; }
 
@@ -1067,28 +1071,15 @@ figure.full video { width: 100%; }
 .tx-dlf-search-facets { display: none; }
 
 /* ##################################################### */
-/* ############## ANPASSUNG 17.03. ##################### */
-/* ##################################################### */
-.tx-dlf-listview { display: flex; flex-wrap: wrap; }
-
-.tx-dlf-listview .tx-dlf-search-numHits { width: 50%; padding-top: 1.5em; }
-
-.tx-dlf-listview > form { width: 50%; }
-
-.tx-dlf-listview > form label[for="ListView-5e66351ec4bb0"] { display: none; }
-
-.tx-dlf-listview .pagination { width: 100%; }
-
-.tx-dlf-listview .tx-dlf-listview-list { width: 100%; }
-
-/* ##################################################### */
 /* ############## COOKIE-BAR ########################### */
 /* ##################################################### */
 .cookie-message { position: fixed; width: 70%; max-width: 800px; bottom: 2em; left: 2em; right: 0; padding: 1em; z-index: 99; font-size: 0.8em; background-color: rgba(247, 240, 227, 0.8); text-align: left; }
 
 .cookie-message .wrap { background: #ffffff; display: flex; padding: 1em; align-items: flex-end; }
 
-.cookie-message .wrap a { display: block; background-color: #e3000b; padding: .5em 1em; margin: 0 .5em .5em 3em; color: #ffffff; white-space: nowrap; }
+.cookie-message .wrap a { display: block; background-color: #e3000b; padding: .5em 1em; margin: 0 .5em .5em 3em; color: #ffffff; white-space: nowrap; cursor: pointer; }
+
+.cookie-message .wrap a:hover { background-color: #c60006; }
 
 /* Responsive Layout*/
 /* ##################################################### */

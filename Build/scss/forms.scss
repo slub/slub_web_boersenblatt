@@ -227,17 +227,19 @@ input[type="radio"]:checked + label::before {
 
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   font-family: $heading-font-family;
   font-weight: 400;
   letter-spacing: 1px;
   h2 {padding: 1em 0; letter-spacing: 0; display: none;}
-  .tx-dlf-search-numHits {margin: 0;line-height: 1.5; color: $color5}
+  .tx-dlf-search-numHits {margin: 0;line-height: 1.5; color: $color5;width: 50%; padding-top: 1.5em}
   .tx-dlf-listview-counts {display: none;}
   /* Dropdowns, noch klären ob notwendig */
-  > form {
+  > form {width: 50%;
       div {
         label {color: $color5}
-        label[for="ListView-5e66351ec4bb0"] {display: none}
+        label:last-of-type {display: none}
         select {
           display: inline-block;
           padding: 1em 2em 1em 1em;
@@ -259,6 +261,7 @@ input[type="radio"]:checked + label::before {
 }
 
 ol.tx-dlf-listview-list {
+    width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
