@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tt_content']['columns']['bodytext']['l10n_mode'] = 'prefixLangT
 
 $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image'] = [
     'config' => [
-        'maxitems' => 1,
+        'maxitems' => 3,
         'minitems' => 0,
     ],
 ];

@@ -142,7 +142,7 @@ TCEFORM {
     }
 
     imageorient {
-      disabled = 1
+      disabled = 0
       removeItems = 1,2,9,10,17,18
     }
 
