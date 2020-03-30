@@ -19,8 +19,7 @@
 				<source>News</source>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.23">
-				<source>Gallery
-</source>
+				<source>Gallery</source>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.30">
 				<source>Partner Logos</source>
@@ -46,8 +45,8 @@
 			<trans-unit id="ce_feature.title">
 				<source>Feature Elements</source>
 			</trans-unit>
-			<trans-unit id="ce_feature_item.title">
-				<source>Feature Element</source>
+			<trans-unit id="ce_feature_item">
+				<source>Feature Element Item</source>
 			</trans-unit>
 			<trans-unit id="ce_field_header.label_default">
 				<source>Header</source>

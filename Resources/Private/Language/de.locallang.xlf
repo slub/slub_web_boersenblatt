@@ -24,8 +24,7 @@
 				<target>News</target>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.23">
-				<source>Gallery
-</source>
+				<source>Gallery</source>
 				<target>Galerie</target>
 			</trans-unit>
 			<trans-unit id="backend_layout.colpos.30">
@@ -56,9 +55,9 @@
 				<source>Feature Elements</source>
 				<target>Feature Elemente</target>
 			</trans-unit>
-			<trans-unit id="ce_feature_item.title">
-				<source>Feature Element</source>
-				<target>Feature Element</target>
+			<trans-unit id="ce_feature_item">
+				<source>Feature Element Item</source>
+				<target>Feature Element Item</target>
 			</trans-unit>
 			<trans-unit id="ce_field_header.label_default">
 				<source>Header</source>
