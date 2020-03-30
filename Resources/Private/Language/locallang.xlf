@@ -48,6 +48,9 @@
 			<trans-unit id="ce_feature_item">
 				<source>Feature Element Item</source>
 			</trans-unit>
+			<trans-unit id="ce_feature_item.title">
+				<source>Feature Element Item</source>
+			</trans-unit>
 			<trans-unit id="ce_field_header.label_default">
 				<source>Header</source>
 			</trans-unit>
