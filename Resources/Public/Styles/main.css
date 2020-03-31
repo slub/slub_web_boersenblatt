@@ -468,7 +468,9 @@ ol.tx-dlf-listview-list ol li .tx-dlf-listview-preview em { color: #e3000b; font
 
 ol.tx-dlf-listview-list ol li .tx-dlf-listview-thumbnail { order: 2; display: none; width: 100%; }
 
-ol.tx-dlf-listview-list ol li .tx-dlf-listview-thumbnail img { margin: 1em auto; display: block; }
+ol.tx-dlf-listview-list ol li .tx-dlf-listview-thumbnail img { margin: 1em auto; max-height: 350px; display: block; }
+
+ol.tx-dlf-listview-list ol li .tx-dlf-listview-thumbnail img:hover { max-height: 600px; }
 
 ol.tx-dlf-listview-list ol li dt.tx-dlf-metadata-type { display: none; }
 

@@ -296,7 +296,14 @@ ol.tx-dlf-listview-list {
           em {color: $color1; font-style: normal;}
         }
         .tx-dlf-listview-thumbnail {order: 2; display: none; width: 100%;
-          img {margin: 1em auto; display: block}
+          img {
+              margin: 1em auto;
+              max-height: 350px;
+              display: block
+          }
+          img:hover {
+            max-height: 600px;
+          }
         }
         dt.tx-dlf-metadata-type {display: none;}
         dd.tx-dlf-metadata-type {font-size: 1em; color: $color3; display: block; padding: 0}
