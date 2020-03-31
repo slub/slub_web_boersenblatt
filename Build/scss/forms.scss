@@ -265,7 +265,13 @@ ol.tx-dlf-listview-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  img {border: 1em solid $color4;}
+  img {
+      border: 1em solid $color4;
+      max-height: 350px;
+  }
+  img:hover {
+    max-height: 600px;
+  }
 
   li {margin: 5em 0}
     dl {

@@ -430,7 +430,9 @@ input[type="radio"]:checked + label::before { background: #e3000b; }
 
 ol.tx-dlf-listview-list { width: 100%; list-style: none; margin: 0; padding: 0; }
 
-ol.tx-dlf-listview-list img { border: 1em solid #ffffff; }
+ol.tx-dlf-listview-list img { border: 1em solid #ffffff; max-height: 350px; }
+
+ol.tx-dlf-listview-list img:hover { max-height: 600px; }
 
 ol.tx-dlf-listview-list li { margin: 5em 0; }
 
