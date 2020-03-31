@@ -23,6 +23,10 @@
                 </div>
             </f:if>
 
+            <f:if condition="{data.layout} != 1">
+                <h1>{data.title}</h1>
+            </f:if>
+
             <div class="inner">
                 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
             </div>

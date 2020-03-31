@@ -4,14 +4,16 @@ TCEFORM {
   pages {
     layout {
       disabled = 0
+      altLabels.1 = Do not show page title
+      removeItems = 2,3
     }
 
     subtitle {
-      disabled = 0
+      disabled = 1
     }
 
     categories {
-      disabled = 0
+      disabled = 1
     }
 
     rowDescription {
