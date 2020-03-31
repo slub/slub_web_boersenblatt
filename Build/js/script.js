@@ -86,7 +86,7 @@ $(document).ready(function() {
 
     $('a[data-rel^=lightcase]').lightcase({
         showTitle: true,
-        showCaption: false,
+        showCaption: true,
         maxWidth: 1200,
         maxHeight: 800
     });
