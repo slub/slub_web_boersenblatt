@@ -268,6 +268,7 @@ ol.tx-dlf-listview-list {
   img {
       border: 1em solid $color4;
       max-height: 350px;
+      transition: all 0.275s ease;
   }
   img:hover {
     max-height: 600px;
@@ -305,7 +306,8 @@ ol.tx-dlf-listview-list {
           img {
               margin: 1em auto;
               max-height: 350px;
-              display: block
+              transition: all 0.275s ease;
+              display: block;
           }
           img:hover {
             max-height: 600px;
