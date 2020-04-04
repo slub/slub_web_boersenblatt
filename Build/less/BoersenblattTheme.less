@@ -20,12 +20,19 @@
 @basegrey-color: rgb(51, 51, 51);
 @lightgrey-color: lighten(@basegrey-color, 65%);
 
+@color12: #f7f0e3; /* Hintergrund */
+
+body {
+    background-color: @color12;
+}
+
 /* import webfont files  =============================================================================================== */
 @font-face {
     font-family: 'Martel';
     src: url('../Fonts/Martel-Regular.woff2') format('woff2'),
         url('../Fonts/Martel-Regular.woff') format('woff');
     font-weight: 500;
+
     font-style: normal;
 }
 
@@ -87,7 +94,7 @@
             background-size: auto 50px;
             background-position: 0 0;
             line-height: 24px;
-            padding-top: 70px;
+            padding-top: 74px;
         }
     }
     @media screen and (min-width: @desktopViewportWidth) {

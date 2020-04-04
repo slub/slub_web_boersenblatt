@@ -367,6 +367,48 @@ a {
 .document-view .document-functions .provider .mobile-controls .fullscreen.active:after {
   transform: rotate(0);
 }
+.document-view .document-functions .provider .mobile-controls .fulltext-search-toggle {
+  position: absolute;
+  top: 0;
+  right: 90px;
+  width: 40px;
+  height: 40px;
+  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -560px 0;
+  background-size: auto 120px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.document-view .document-functions .provider .mobile-controls .fulltext-search-toggle:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  content: "+";
+  font-size: 42px;
+  line-height: 32px;
+  color: #116677;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+}
+.search-indocument-active .document-view .document-functions .provider .mobile-controls .fulltext-search-toggle {
+  background: #e6f5f7;
+}
+.search-indocument-active .document-view .document-functions .provider .mobile-controls .fulltext-search-toggle:after {
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.document-view .document-functions .provider .mobile-controls .fulltext-search-toggle.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.no-touchevents .document-view .document-functions .provider .mobile-controls .fulltext-search-toggle {
+  transition: all 0.3s ease-out;
+}
+.no-touchevents .document-view .document-functions .provider .mobile-controls .fulltext-search-toggle:hover {
+  transform: scale(1.2);
+}
 .fullscreen .document-view .document-functions .provider {
   transform: translateY(-100%);
 }
@@ -1982,11 +2024,11 @@ a {
     pointer-events: none;
   }
   .page-control > div {
+    bottom: 50%;
+    margin-bottom: -20px;
     height: 80px;
     min-width: 80px;
     pointer-events: all;
-    bottom: 50%;
-    margin-bottom: -20px;
   }
   .page-control > div span {
     display: block;
@@ -2006,11 +2048,19 @@ a {
   .page-control > div span span:before {
     transition: all 0.3s ease-out;
   }
+  .touchevents .page-control > div span a,
+  .touchevents .page-control > div span span {
+    pointer-events: none;
+  }
   .no-touchevents .page-control > div span a:hover {
     transform: scale(1.1);
   }
   .page-control > div span span {
     cursor: not-allowed;
+  }
+  .touchevents .page-control > div.enable-touchevent span a,
+  .touchevents .page-control > div.enable-touchevent span span {
+    pointer-events: all;
   }
   .page-control > div.no-transition a,
   .page-control > div.no-transition span,
@@ -2857,50 +2907,11 @@ body.gridview .step-back-button {
   right: 106px;
 }
 .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -560px 0;
-  background-size: auto 120px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  content: "+";
-  font-size: 42px;
-  line-height: 32px;
-  color: #116677;
-  transition: all 0.3s ease-out;
-  opacity: 0;
-}
-.search-indocument-active .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
-  background: #e6f5f7;
-}
-.search-indocument-active .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
-  transform: rotate(45deg);
-  opacity: 1;
-}
-.tx-dlf-toolsFulltextsearch .fulltext-search-toggle.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-.no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
-  transition: all 0.3s ease-out;
-}
-.no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:hover {
-  transform: scale(1.2);
+  display: none;
 }
 .tx-dlf-toolsFulltextsearch form {
   position: absolute;
-  top: 60px;
+  top: 0;
   right: -106px;
   height: 40px;
   width: 100vw;
@@ -2953,7 +2964,7 @@ body.gridview .step-back-button {
 }
 .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-loading,
 .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-clearing {
-  display: none;
+  display: none !important;
 }
 .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results {
   position: fixed;
@@ -3026,8 +3037,10 @@ body.gridview .step-back-button {
   transform: translateY(-100%);
 }
 @media screen and (min-width: 480px) {
+  .tx-dlf-toolsFulltextsearch {
+    margin-top: -50px;
+  }
   .tx-dlf-toolsFulltextsearch form {
-    top: 10px;
     right: 40px;
     width: 400px;
   }
@@ -3053,8 +3066,54 @@ body.gridview .step-back-button {
 }
 @media screen and (min-width: 1024px) {
   .tx-dlf-toolsFulltextsearch {
-    top: 10px;
+    top: 10px !important;
     right: 8px;
+    margin: 0;
+    z-index: 50;
+  }
+  .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -560px 0;
+    background-size: auto 120px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+  }
+  .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    content: "+";
+    font-size: 42px;
+    line-height: 32px;
+    color: #116677;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+  }
+  .search-indocument-active .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
+    background-color: #e6f5f7;
+    background-position: -560px 40px;
+  }
+  .search-indocument-active .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  .tx-dlf-toolsFulltextsearch .fulltext-search-toggle.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
+    transition: all 0.3s ease-out;
+  }
+  .no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:hover {
+    transform: scale(1.2);
   }
   .tx-dlf-toolsFulltextsearch form {
     top: 80px;
@@ -3162,6 +3221,10 @@ body.calendar .tx-dlf-toolsFulltextsearch form {
  * Author: Thomas Jung <thomas@jung.digital>
  *
  */
+/* Hintergrund */
+body {
+  background-color: #f7f0e3;
+}
 /* import webfont files  =============================================================================================== */
 @font-face {
   font-family: 'Martel';
@@ -3207,7 +3270,7 @@ body.calendar .tx-dlf-toolsFulltextsearch form {
   background-size: auto 50px;
   background-position: 0 0;
   line-height: 24px;
-  padding-top: 70px;
+  padding-top: 74px;
 }
 .control-bar .header-bar .brand a:before {
   content: '';
