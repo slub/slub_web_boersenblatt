@@ -1096,7 +1096,6 @@ img { max-width: 100%; height: auto; }
 /* ##################################################### */
 @media only screen and (max-width: 1280px) { body { margin-left: 300px; }
   aside { width: 300px; }
-  .arrow { display: none; }
   .tx-dlf-listview .tx-dlf-search-numHits { width: 100%; }
   .tx-dlf-listview > form { width: 100%; } }
 
