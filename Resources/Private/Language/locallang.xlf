@@ -12,15 +12,6 @@
 			<trans-unit id="backend_layout.colpos.20">
 				<source>Home</source>
 			</trans-unit>
-			<trans-unit id="backend_layout.colpos.21">
-				<source>Feature</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.colpos.22">
-				<source>News</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.colpos.23">
-				<source>Gallery</source>
-			</trans-unit>
 			<trans-unit id="backend_layout.colpos.30">
 				<source>Partner Logos</source>
 			</trans-unit>

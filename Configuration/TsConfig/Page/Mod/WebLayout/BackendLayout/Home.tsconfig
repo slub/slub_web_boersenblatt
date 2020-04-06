@@ -25,26 +25,6 @@ mod {
                 }
               }
 
-              2 {
-                columns {
-                  2 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.21
-                    colPos = 21
-                    colspan = 8
-                  }
-                }
-              }
-
-              3 {
-                columns {
-                  2 {
-                    name = LLL:EXT:slub_web_boersenblatt/Resources/Private/Language/locallang.xlf:backend_layout.colpos.22
-                    colPos = 22
-                    colspan = 8
-                  }
-                }
-              }
-
               4 {
                 columns {
                   2 {
