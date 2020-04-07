@@ -1,11 +1,5 @@
 page {
   includeCSS {
-  #  googleTypekit = https://use.typekit.net/yxn3uqo.css
-  #  googleTypekit.external = 1
-
-  #  googleMartel = https://fonts.googleapis.com/css?family=Martel:200,300,400,600,700&display=swap
-  #  googleMartel.external = 1
-
     app = {$path.public}/Styles/main.css
   }
 

@@ -5,4 +5,11 @@ page {
   meta {
     viewport = width=device-width, initial-scale=1
   }
+
+  headerData {
+    10 = TEXT
+    10.value (
+      <link rel="apple-touch-icon" sizes="180x180" href="{$path.public}/Icons/apple-touch-icon.png">
+    )
+  }
 }
