@@ -3347,11 +3347,30 @@ body {
 .tx-dlf-calendar .year-anchor {
   padding: 0 0 10px 60px;
 }
-@media screen and (min-width: 1024px) {
-  .tx-dlf-pagegrid-list li {
-    width: 200px;
-  }
+.tx-dlf-pagegrid-list li {
+  width: 151px;
+  height: 250px;
+  position: relative;
 }
 .tx-dlf-pagegrid-list li img {
   max-height: 250px;
+}
+.no-touchevents .tx-dlf-pagegrid-list li {
+  transition: all 0.3s ease-out;
+}
+.no-touchevents .tx-dlf-pagegrid-list li:hover {
+  transform: scale(2);
+  z-index: 10;
+}
+@media screen and (min-width: 768px) {
+  .tx-dlf-pagegrid-list li {
+    width: 182px;
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tx-dlf-pagegrid-list li {
+    width: 200px;
+    height: 250px;
+  }
 }
