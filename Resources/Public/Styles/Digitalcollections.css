@@ -2770,7 +2770,7 @@ body.gridview .step-back-button {
 @media screen and (min-width: 1024px) {
   .tx-dlf-pagegrid-pagebrowser {
     height: 70px;
-    padding: 15px;
+    padding: 15px 0;
     font-family: 'Fira Sans Condensed', 'Calibri-Bold', 'Helvetica', Sans-serif;
     font-size: 14px;
     line-height: 30px;
@@ -3346,4 +3346,12 @@ body {
 }
 .tx-dlf-calendar .year-anchor {
   padding: 0 0 10px 60px;
+}
+@media screen and (min-width: 1024px) {
+  .tx-dlf-pagegrid-list li {
+    width: 200px;
+  }
+}
+.tx-dlf-pagegrid-list li img {
+  max-height: 250px;
 }
