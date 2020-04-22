@@ -281,7 +281,7 @@ p { margin: 1em 0 0; }
 
 h1, h2, h3, h4 { font-family: "Fira Sans Condensed", sans-serif; font-weight: 500; color: #e3000b; margin: 0; line-height: 1.3; text-transform: uppercase; }
 
-h1 { font-size: 3em; padding: 3em 0 1em; }
+h1 { font-size: 3em; padding: 3em 2rem 1em; }
 
 h2 { font-size: 2.2em; padding: 3em 0 0; }
 
