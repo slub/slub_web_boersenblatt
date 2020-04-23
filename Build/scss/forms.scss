@@ -141,6 +141,7 @@ input[type="radio"]:checked + label::before {
       justify-content: center;
       flex-wrap: wrap;
       label[for="tx-dlf-search-query"] {display: none;}
+      position: relative;
 
       /* ############################################# */
       /* ###### Autocomplete 09.03.2020 ############## */
@@ -185,6 +186,36 @@ input[type="radio"]:checked + label::before {
         min-width: 80%;
         flex-grow: 1;
       }
+      button {
+				&.close-icon {
+					border:none;
+					background-color: transparent;
+					display: inline-block;
+					vertical-align: middle;
+					outline: 0;
+					cursor: pointer;
+					position: absolute;
+					top: 1.9em;
+					right: 6.5em;
+					&:after {
+						content: "X";
+						display: block;
+						margin: auto;
+						padding: .1em;
+						width: 1.6em;
+						text-align: center;
+						color: $color1;
+						border-radius: 50%;
+						border:2px solid $color1;
+						font-weight: 500;
+						font-size: 1.5em;
+						cursor: pointer;
+					}
+				}
+      }
+      .ui-autocomplete-input:not(:valid) ~ button.close-icon {
+        display: none;
+      }
       button[type="submit"] {
         width: 4.5em;
         background-color: $color1;
@@ -200,6 +231,14 @@ input[type="radio"]:checked + label::before {
       }
     }
   }
+}
+
+@media only screen and (max-width : 1024px) {
+  .tx-dlf-search form > div button.close-icon {top: 1.75em; right: 5.8em }
+}
+
+@media only screen and (max-width : 568px) {
+  .tx-dlf-search form > div button.close-icon {display: none !important}
 }
 
 

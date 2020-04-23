@@ -373,7 +373,7 @@ input[type="radio"]:checked + label::before { background: #e3000b; }
 /* ##################################################### */
 .tx-dlf-search { max-width: 1000px; margin: auto auto 2em; position: relative; width: 100%; }
 
-.tx-dlf-search form > div { padding: 1em 1em .7em; margin: 0 2em; background-color: rgba(247, 240, 227, 0.8); box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05); display: flex; justify-content: center; flex-wrap: wrap; /* ############################################# */ /* ###### Autocomplete 09.03.2020 ############## */ /* ############################################# */ }
+.tx-dlf-search form > div { padding: 1em 1em .7em; margin: 0 2em; background-color: rgba(247, 240, 227, 0.8); box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05); display: flex; justify-content: center; flex-wrap: wrap; position: relative; /* ############################################# */ /* ###### Autocomplete 09.03.2020 ############## */ /* ############################################# */ }
 
 .tx-dlf-search form > div label[for="tx-dlf-search-query"] { display: none; }
 
@@ -391,11 +391,21 @@ input[type="radio"]:checked + label::before { background: #e3000b; }
 
 .tx-dlf-search form > div input#tx-dlf-search-query { width: auto; min-width: 80%; flex-grow: 1; }
 
+.tx-dlf-search form > div button.close-icon { border: none; background-color: transparent; display: inline-block; vertical-align: middle; outline: 0; cursor: pointer; position: absolute; top: 1.9em; right: 6.5em; }
+
+.tx-dlf-search form > div button.close-icon:after { content: "X"; display: block; margin: auto; padding: .1em; width: 1.6em; text-align: center; color: #e3000b; border-radius: 50%; border: 2px solid #e3000b; font-weight: 500; font-size: 1.5em; cursor: pointer; }
+
+.tx-dlf-search form > div .ui-autocomplete-input:not(:valid) ~ button.close-icon { display: none; }
+
 .tx-dlf-search form > div button[type="submit"] { width: 4.5em; background-color: #e3000b; transition: color 0.5s; }
 
 .tx-dlf-search form > div button[type="submit"]:hover { background-color: #c60006; }
 
 .tx-dlf-search form > div button[type="submit"] span { font-size: 1.4em; color: #ffffff; padding: 0 0 0 .2em; }
+
+@media only screen and (max-width: 1024px) { .tx-dlf-search form > div button.close-icon { top: 1.75em; right: 5.8em; } }
+
+@media only screen and (max-width: 568px) { .tx-dlf-search form > div button.close-icon { display: none !important; } }
 
 /* ##################################################### */
 /* ############# Autocomplete 09.03.2020 ############### */
