@@ -11,7 +11,7 @@
 <form class="tx-dlf-search-form" action="###ACTION_URL###" method="post" enctype="multipart/form-data"><div>
     <label for="tx-dlf-search-query">###LABEL_QUERY###</label>
     <!-- Never change the @id of this input field! Otherwise search suggestions won't work! -->
-    <input type="text" id="tx-dlf-search-query" name="###FIELD_QUERY###" value="###QUERY###" placeholder="Im Börsenblatt suchen nach:" />
+    <input type="text" id="tx-dlf-search-query" name="###FIELD_QUERY###" value="###QUERY###" required placeholder="Im Börsenblatt suchen nach:" />
     <button class="close-icon" type="button" onclick="document.getElementById('tx-dlf-search-query').value = '';"></button>
     ###LOGICAL_PAGE###
     <!-- The following element is needed for auto-completion! -->
