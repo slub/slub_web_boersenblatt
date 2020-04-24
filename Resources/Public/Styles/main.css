@@ -1091,9 +1091,9 @@ figure.full video { width: 100%; }
 
 .cookie-message .wrap { background: #ffffff; display: flex; padding: 1em; align-items: flex-end; }
 
-.cookie-message .wrap a { display: block; background-color: #e3000b; padding: .5em 1em; margin: 0 .5em .5em 3em; color: #ffffff; white-space: nowrap; cursor: pointer; }
+.cookie-message .wrap a.my-close-button { display: block; background-color: #e3000b; padding: .5em 1em; margin: 0 .5em .5em 3em; color: #ffffff; white-space: nowrap; cursor: pointer; }
 
-.cookie-message .wrap a:hover { background-color: #c60006; }
+.cookie-message .wrap a.my-close-button:hover { background-color: #c60006; }
 
 /* Responsive Layout*/
 /* ##################################################### */

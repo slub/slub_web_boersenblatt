@@ -429,7 +429,7 @@ figure {
 		display: flex;
 		padding: 1em;
 		align-items: flex-end;
-		a {
+		a.my-close-button {
 			display: block;
 			background-color: $color1;
 			padding: .5em 1em;
