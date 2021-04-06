@@ -20,12 +20,14 @@
 		"source": "https://github.com/slub/slub_web_boersenblatt"
 	},
 	"require": {
-		"typo3/cms-core": "^9.5",
-		"gridelementsteam/gridelements": "^9.5"
+		"typo3/cms-core": "~9.5.26",
+		"gridelementsteam/gridelements": "^9.5",
+		"slub/slub-digitalcollections": "^2.0",
+		"kitodo/presentation": "^3.2"
 	},
 	"autoload": {
 		"psr-4": {
-			"Slub\\Boersenblatt\\": "Classes/"
+			"Slub\\SlubWebBoersenblatt\\": "Classes/"
 		}
 	},
 	"extra": {
