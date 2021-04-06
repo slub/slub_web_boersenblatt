@@ -3428,3 +3428,9 @@ body {
     height: 250px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .document-view .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
+    top: 5px;
+    right: 5px;
+  }
+}
