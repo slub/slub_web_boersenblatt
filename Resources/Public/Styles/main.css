@@ -332,13 +332,10 @@ figure a { border: none; }
 /* ##################################################### */
 /* ############## Placeholder styling ################## */
 /* ##################################################### */
-::-webkit-input-placeholder { color: #606060; font-family: "Fira Sans Condensed", sans-serif; letter-spacing: .7px; font-weight: 400; }
 
 ::-moz-placeholder { color: #606060; font-family: "Fira Sans Condensed", sans-serif; letter-spacing: .7px; font-weight: 400; }
 
 :-ms-input-placeholder { color: #606060; font-family: "Fira Sans Condensed", sans-serif; letter-spacing: .7px; font-weight: 400; }
-
-::-ms-input-placeholder { color: #606060; font-family: "Fira Sans Condensed", sans-serif; letter-spacing: .7px; font-weight: 400; }
 
 ::placeholder { color: #606060; font-family: "Fira Sans Condensed", sans-serif; letter-spacing: .7px; font-weight: 400; }
 
@@ -728,7 +725,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; box-shado
 
 .swiper-container-cube .swiper-slide-shadow-top, .swiper-container-cube .swiper-slide-shadow-bottom, .swiper-container-cube .swiper-slide-shadow-left, .swiper-container-cube .swiper-slide-shadow-right { z-index: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
-.swiper-container-cube .swiper-cube-shadow { position: absolute; left: 0; bottom: 0px; width: 100%; height: 100%; background: #000; opacity: 0.6; -webkit-filter: blur(50px); filter: blur(50px); z-index: 0; }
+.swiper-container-cube .swiper-cube-shadow { position: absolute; left: 0; bottom: 0px; width: 100%; height: 100%; background: #000; opacity: 0.6; filter: blur(50px); z-index: 0; }
 
 .swiper-container-flip { overflow: visible; }
 

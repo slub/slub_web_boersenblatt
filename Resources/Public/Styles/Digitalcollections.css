@@ -169,6 +169,11 @@ a {
   color: #cc0000;
   text-decoration: none;
 }
+:focus {
+  position: relative;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
 /* ==============[ 'window' structure with small offset ]================================= */
 .main-wrapper {
   position: absolute;
@@ -257,7 +262,6 @@ a {
 }
 .document-view .tx-dlf-logobar li img {
   max-height: 30px;
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 .document-view .document-functions .provider {
@@ -274,7 +278,12 @@ a {
   transition: all 0.3s ease-out;
 }
 .document-view .document-functions .provider > a {
-  display: none;
+  flex: 0 0 85px;
+}
+.document-view .document-functions .provider > a img {
+  margin-top: 5px;
+  width: 70px;
+  height: 33px;
 }
 .document-view .document-functions .provider .mobile-meta {
   position: relative;
@@ -341,7 +350,7 @@ a {
   position: absolute;
   width: 12px;
   height: 12px;
-  background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -576px -54px;
+  background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -574px -54px;
   background-size: auto 120px;
   display: block;
   content: " ";
@@ -412,6 +421,15 @@ a {
 .fullscreen .document-view .document-functions .provider {
   transform: translateY(-100%);
 }
+.document-view .document-functions.missing-provider-image .provider > a {
+  display: none;
+}
+.document-view .document-functions.missing-provider-image .provider > a img {
+  display: none;
+}
+.document-view .document-functions.missing-provider-image .provider .mobile-meta {
+  padding-left: 10px;
+}
 @media screen and (min-width: 480px) {
   .document-view .tx-dlf-logobar {
     top: 5px;
@@ -429,9 +447,6 @@ a {
   }
   .document-view .tx-dlf-logobar li img {
     max-width: 100%;
-  }
-  .document-view .document-functions .provider {
-    padding-right: 40%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -459,6 +474,9 @@ a {
   .document-view .document-functions .provider .mobile-meta,
   .document-view .document-functions .provider .mobile-controls {
     display: none;
+  }
+  .document-view .document-functions.missing-provider-image ul {
+    left: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -615,9 +633,6 @@ a {
   background: transparent;
   outline: none;
 }
-.control-bar .header-bar nav .nav-toggle .nav-label {
-  display: none;
-}
 .control-bar .header-bar nav .nav-toggle .nav-button-bar {
   position: relative;
   width: 100%;
@@ -694,7 +709,8 @@ a {
 .control-bar .header-bar nav .secondary-nav li:first-child a {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-.control-bar .header-bar nav .secondary-nav.open {
+.control-bar .header-bar nav .secondary-nav.open,
+.control-bar .header-bar nav .secondary-nav:focus-within {
   padding-bottom: 65px;
   max-height: 320px;
   min-height: 60px;
@@ -740,14 +756,19 @@ a {
   background: rgba(17, 102, 119, 0.97) url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat 0 0;
   background-size: auto 120px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .control-bar .metadata-wrapper.open,
-.control-bar .toc-wrapper.open {
+.control-bar .toc-wrapper.open,
+.control-bar .metadata-wrapper:focus-within,
+.control-bar .toc-wrapper:focus-within {
   transform: translateX(0);
   z-index: 1100;
 }
 .control-bar .metadata-wrapper.open .offcanvas-toggle,
-.control-bar .toc-wrapper.open .offcanvas-toggle {
+.control-bar .toc-wrapper.open .offcanvas-toggle,
+.control-bar .metadata-wrapper:focus-within .offcanvas-toggle,
+.control-bar .toc-wrapper:focus-within .offcanvas-toggle {
   border-color: white;
 }
 .control-bar .metadata-wrapper h3,
@@ -863,10 +884,14 @@ a {
   .control-bar .header-bar nav .secondary-nav li a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+  .control-bar .header-bar nav .secondary-nav li a:focus {
+    outline-color: white;
+  }
   .control-bar .header-bar nav .secondary-nav li:first-child a {
     border: 0 none;
   }
-  .control-bar .header-bar nav .secondary-nav.open {
+  .control-bar .header-bar nav .secondary-nav.open,
+  .control-bar .header-bar nav .secondary-nav:focus-within {
     padding: 15px;
     opacity: 1;
     right: -220px;
@@ -983,18 +1008,19 @@ a {
 }
 /* ==============[ toc (inside the respective wrap > see above) ]========================= */
 .tx-dlf-toc {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .tx-dlf-toc ul.toc {
   position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
   line-height: 1.2;
   font-size: 14px;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid rgba(217, 217, 217, 0.2);
 }
 .tx-dlf-toc ul.toc ul li {
   position: relative;
@@ -1078,6 +1104,7 @@ a {
   background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/viewerTocIcons.svg') no-repeat -90px 0;
   background-size: auto 60px;
   display: block;
+  color: transparent;
   transform: scale(0.6);
 }
 .tx-dlf-toc ul.toc ul li a .meta-type-icon.meta-type-Abbildung,
@@ -1111,6 +1138,14 @@ a {
   opacity: 0.6;
 }
 @media screen and (min-width: 1024px) {
+  .tx-dlf-toc {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    overflow: visible;
+  }
   .tx-dlf-toc:after {
     position: absolute;
     top: 0;
@@ -1407,6 +1442,9 @@ a {
   left: 15px;
   right: 15px;
 }
+.document-functions > ul > li > a:focus {
+  outline: none;
+}
 .document-functions > ul > li.submenu:before {
   position: absolute;
   top: -17.5px;
@@ -1445,6 +1483,9 @@ a {
   display: block;
   padding-left: 40px;
   margin: 15px 0;
+}
+.document-functions > ul > li.submenu > ul li a:focus {
+  outline-color: white;
 }
 .document-functions > ul > li.submenu > ul li a:before {
   position: absolute;
@@ -1487,12 +1528,14 @@ a {
 .document-functions > ul > li.submenu > ul li a.terms-of-use:before {
   background-position: -640px -80px;
 }
-.document-functions > ul > li.submenu.open:before {
+.document-functions > ul > li.submenu.open:before,
+.document-functions > ul > li.submenu:focus-within:before {
   top: -13.5px;
   border-top-width: 10px;
   opacity: 1;
 }
-.document-functions > ul > li.submenu.open ul {
+.document-functions > ul > li.submenu.open ul,
+.document-functions > ul > li.submenu:focus-within ul {
   transform: scaleY(1) translateY(0);
   opacity: 1;
 }
@@ -1592,7 +1635,8 @@ a {
   .document-functions > ul li.submenu > ul li a {
     white-space: nowrap;
   }
-  .document-functions > ul li.submenu.open > ul {
+  .document-functions > ul li.submenu.open > ul,
+  .document-functions > ul li.submenu:focus-within > ul {
     transform: scaleY(1) translateY(0);
   }
 }
@@ -1634,7 +1678,8 @@ a {
     transform: scale(1);
     background: rgba(255, 255, 255, 0.2);
   }
-  .document-functions > ul li.submenu.open:before {
+  .document-functions > ul li.submenu.open:before,
+  .document-functions > ul li.submenu:focus-within:before {
     top: auto;
     bottom: -10px;
     border-width: 0 10px 10px 10px;
@@ -1697,7 +1742,7 @@ a {
     background-color: #dff1f4;
     color: #333333;
   }
-  .view-functions ul li.tx-dlf-toolsImagemanipulation > span {
+  .view-functions ul li.tx-dlf-imagemanipulationtool > span {
     opacity: 1;
     overflow: hidden;
     width: auto;
@@ -1705,7 +1750,7 @@ a {
     display: inline;
     margin: 0;
   }
-  .view-functions ul li.tx-dlf-toolsImagemanipulation > span > span > a {
+  .view-functions ul li.tx-dlf-imagemanipulationtool > span > span > a {
     position: relative;
     display: inline-block;
     width: 40px;
@@ -1720,7 +1765,7 @@ a {
     background: white url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -200px 0;
     background-size: auto 120px;
   }
-  .view-functions ul li.tx-dlf-toolsImagemanipulation > span > span > a.active:before {
+  .view-functions ul li.tx-dlf-imagemanipulationtool > span > span > a.active:before {
     position: absolute;
     top: 2px;
     right: 0;
@@ -1766,7 +1811,7 @@ a {
     position: absolute;
     width: 12px;
     height: 12px;
-    background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -575px -54px;
+    background: url('/typo3conf/ext/slub_digitalcollections/Resources/Public/Images/Slub/viewerControlIcons.svg') no-repeat -574px -54px;
     background-size: auto 120px;
     display: block;
     content: " ";
@@ -1807,14 +1852,16 @@ a {
 /* ==============[ the image manipulation tools ]========================================= */
 .image-manipulation {
   position: absolute;
-  top: 70px;
-  right: 55px;
-  z-index: 1010;
+  top: 55px;
+  right: 5px;
 }
 .image-manipulation .slider-container {
   background: rgba(17, 102, 119, 0.9);
   padding: 30px 20px 10px 56px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.image-manipulation .slider-container.open {
+  z-index: 1010;
 }
 .image-manipulation .slider-container:before {
   position: absolute;
@@ -1917,7 +1964,7 @@ a {
   background-position: -520px -80px;
 }
 .image-manipulation .slider-container .checkbox {
-  margin-left: -36px;
+  margin-left: -37px;
 }
 .image-manipulation .slider-container .checkbox:before {
   background-position: -520px -40px;
@@ -2438,7 +2485,7 @@ body.calendar .step-back-button {
   background: #e6f5f7;
   border-radius: 100%;
 }
-.no-touchevents .tx-dlf-calendar .calendar-view table tr td {
+.no-touchevents .tx-dlf-calendar .calendar-view table tr td h4 {
   cursor: pointer;
 }
 .tx-dlf-calendar .calendar-view table tr td ul {
@@ -2820,7 +2867,7 @@ body.gridview .step-back-button {
  *
  * Fulltext
  * ================================================
- * Specials for the fulltext view 
+ * Specials for the fulltext view
  *
  * Author: Thomas Jung <thomas@jung.digital>
  *
@@ -2940,6 +2987,7 @@ body.gridview .step-back-button {
 }
 .tx-dlf-toolsFulltextsearch form input[type="text"]:focus {
   color: #116677;
+  outline: 1px solid white;
 }
 .tx-dlf-toolsFulltextsearch form button[type="submit"],
 .tx-dlf-toolsFulltextsearch form input[type="submit"] {
@@ -2957,7 +3005,12 @@ body.gridview .step-back-button {
   background-size: auto 120px;
   border-radius: 20px;
 }
-.search-indocument-active .tx-dlf-toolsFulltextsearch form {
+.tx-dlf-toolsFulltextsearch form button[type="submit"]:focus,
+.tx-dlf-toolsFulltextsearch form input[type="submit"]:focus {
+  outline: 1px solid white;
+}
+.search-indocument-active .tx-dlf-toolsFulltextsearch form,
+.tx-dlf-toolsFulltextsearch form:focus-within {
   pointer-events: all;
   opacity: 1;
   transform: translateY(0);
@@ -3003,6 +3056,7 @@ body.gridview .step-back-button {
   font-family: 'Fira Sans Condensed', 'Calibri-Bold', 'Helvetica', Sans-serif;
   color: #cc0000;
   font-style: normal;
+  font-weight: bold;
 }
 .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .textsnippet a {
   color: #333;
@@ -3372,5 +3426,11 @@ body {
   .tx-dlf-pagegrid-list li {
     width: 200px;
     height: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .document-view .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:after {
+    top: 5px;
+    right: 5px;
   }
 }
