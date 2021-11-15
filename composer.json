@@ -21,11 +21,13 @@
 	},
 	"require": {
 		"typo3/cms-core": "^9.5",
-		"gridelementsteam/gridelements": "^9.5"
+		"gridelementsteam/gridelements": "^9.5",
+		"slub/slub-digitalcollections": "^2.0",
+		"kitodo/presentation": "~3.3.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"Slub\\Boersenblatt\\": "Classes/"
+			"Slub\\SlubWebBoersenblatt\\": "Classes/"
 		}
 	},
 	"extra": {
