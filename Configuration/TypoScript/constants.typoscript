@@ -7,8 +7,8 @@ path {
 config {
   kitodo {
     templates {
-      search = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/Search.tmpl
-      listview = EXT:slub_web_boersenblatt/Resources/Private/Kitodo/ListView.tmpl
+      search = EXT:slub_web_boersenblatt/Resources/Private/Plugins/Kitodo/Search.tmpl
+      listview = EXT:slub_web_boersenblatt/Resources/Private/Plugins/Kitodo/ListView.tmpl
     }
   }
   matomo {
