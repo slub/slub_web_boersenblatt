@@ -1,10 +1,17 @@
 page {
-  includeCSS {
-    app = {$path.public}/Styles/main.css
-  }
+    includeCSS {
+        app = {$path.public}/Styles/main.css
+    }
 
-  includeJSFooter {
-    app = {$path.public}/JavaScript/script.js
-    app.forceOnTop = true
-  }
+    includeJSFooter {
+        app = {$path.public}/JavaScript/script.js
+        app.forceOnTop = true
+    }
+
+    # exclude javaScript libs form Kitodo.presentation
+    includeJSFooterlibs.jQueryJPlayer >
+    includeJSFooterlibs.jQueryUiMouseSlider >
+    includeJSFooter {
+        jQueryUiMouseSlider = EXT:dlf/Resources/Public/Javascript/jQueryUI/jquery-ui-mouse-slider-resizable-autocomplete.js
+    }
 }
