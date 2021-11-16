@@ -3057,6 +3057,7 @@ body.gridview .step-back-button {
   color: #cc0000;
   font-style: normal;
   font-weight: bold;
+  font-size: 120%;
 }
 .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .textsnippet a {
   color: #333;
@@ -3104,7 +3105,6 @@ body.gridview .step-back-button {
     max-height: calc(100vh - 170px);
   }
   .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -3163,9 +3163,6 @@ body.gridview .step-back-button {
     opacity: 0.5;
     pointer-events: none;
   }
-  .no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle {
-    transition: all 0.3s ease-out;
-  }
   .no-touchevents .tx-dlf-toolsFulltextsearch .fulltext-search-toggle:hover {
     transform: scale(1.2);
   }
@@ -3221,6 +3218,13 @@ body.gridview .step-back-button {
   .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .structure {
     color: white;
     opacity: 0.6;
+  }
+  .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .textsnippet a {
+    color: white;
+  }
+  .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .textsnippet:before,
+  .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li .textsnippet:after {
+    content: "…";
   }
   .tx-dlf-toolsFulltextsearch #tx-dlf-search-in-document-results li a {
     color: white;
