@@ -16,7 +16,7 @@
     "jquery": "^3.6",
     "jquery.cookiebar": "^0.1",
     "lightcase": "^2.5",
-    "swiper": "^5.3.0"
+    "swiper": "^8.1.2"
   },
   "devDependencies": {
     "grunt": "^1.5.3",

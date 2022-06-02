@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                             'Build/node_modules/jquery/dist/jquery.min.js',
                             'Build/node_modules/jquery.cookiebar/jquery.cookieBar.min.js',
                             'Build/node_modules/lightcase/src/js/lightcase.js',
-                            'Build/node_modules/swiper/js/swiper.min.js',
+                            'Build/node_modules/swiper/swiper-bundle.min.js',
                             'Build/js/vendor/*.js',
                             'Build/js/*.js'
                         ],
