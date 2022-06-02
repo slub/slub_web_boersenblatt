@@ -1,107 +1,34 @@
 {
-	"name": "sitepackage",
-	"version": "1.0.0",
-	"description": "TYPO3 Sitepackage",
-	"license": "MIT",
-	"scripts": {
-		"dev": "npx gulp",
-		"prod": "npx gulp prod"
-	},
-	"repository": "npm/npm",
-	"engines": {
-		"node": ">=12.0.0 <13.0.0",
-		"npm": ">=6.12.0 <=6.13.99"
-	},
-	"dependencies": {
-		"jquery": "^3.5",
-		"jquery.cookiebar": "^0.1",
-		"lightcase": "^2.5",
-		"swiper": "^6.5.1"
-	},
-	"devDependencies": {
-		"acorn": "^7.4.1",
-		"del": "^5.1.0",
-		"eslint": "^6.8.0",
-		"eslint-config-standard": "^14.1.1",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^4.2",
-		"eslint-plugin-standard": "^4.0.2",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^6.1.0",
-		"gulp-cli": "^2.3.0",
-		"gulp-concat": "^2.6.0",
-		"gulp-csso": "^4.0.0",
-		"gulp-if": "^3.0.0",
-		"gulp-less": "^4.0.1",
-		"gulp-sass": "^5.0.0",
-		"gulp-sourcemaps": "^2.6.5",
-		"gulp-terser": "^1.4.0",
-		"node-sass": "^6.0.1",
-		"standard": "^14.3.4",
-		"stylelint": "^13.12.0",
-		"stylelint-config-standard": "^19.0",
-		"stylelint-scss": "^3.18.0"
-	},
-	"browserslist": [
-		"last 2 version",
-		"> 1%",
-		"maintained node versions",
-		"not dead"
-	],
-	"eslintConfig": {
-		"extends": "standard",
-		"ignorePatterns": [
-			"vendor/"
-		],
-		"parserOptions": {
-			"ecmaVersion": 6,
-			"sourceType": "script",
-			"indent": [
-				"error",
-				4
-			]
-		}
-	},
-	"stylelint": {
-		"plugins": [
-			"stylelint-scss"
-		],
-		"extends": [
-			"stylelint-config-standard"
-		],
-		"ignoreFiles": [
-			"scss/vendor/**/*"
-		],
-		"rules": {
-			"at-rule-no-unknown": null,
-			"indentation": [
-				2,
-				{
-					"ignore": [
-						"value"
-					],
-					"message": "Please use 2 spaces for indentation.",
-					"severity": "warning"
-				}
-			]
-		}
-	},
-	"postcssSortingConfig": {
-		"order": [
-			"custom-properties",
-			"dollar-variables",
-			"declarations",
-			"at-rules",
-			"rules"
-		],
-		"properties-order": [
-			"display",
-			"position",
-			"top",
-			"right",
-			"bottom",
-			"left"
-		]
-	}
+  "name": "slub-web-boersenblatt",
+  "description": "This TYPO3 extension provides the configuration and setup for the Digital Collections by SLUB Dresden",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.slub-dresden.de:slub-webseite/slub_digitalcollections.git"
+  },
+  "author": "Alexander Bigga",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://www.boersenblatt-digital.de",
+  "dependencies": {
+    "jquery": "^3.6",
+    "jquery.cookiebar": "^0.1",
+    "lightcase": "^2.5",
+    "swiper": "^5.3.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-terser": "^2.0.0",
+    "jit-grunt": "^0.10.0",
+    "less": "^3.12.0",
+    "sass": "^1.52.1",
+    "terser": "^5"
+  }
 }

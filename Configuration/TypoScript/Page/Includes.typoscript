@@ -1,6 +1,10 @@
 page {
     includeCSS {
-        app = {$path.public}/Styles/main.css
+        app = {$path.public}/Css/main.css
+
+        # exclude CSS form Kitodo.presentation
+        jPlayer >
+        openLayers >
     }
 
     includeJSFooter {
